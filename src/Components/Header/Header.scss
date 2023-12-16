@@ -1,0 +1,92 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.header {
+    margin-top: 1rem;
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    // background: url(../../assets/images/hero-background.svg) 100% 0 no-repeat;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -1;
+        left: 0;
+        z-index: -1;
+        background: url(../../assets/images/hero-background.svg) 100% 0 no-repeat;
+        background-size:auto; // Adjust as necessary
+        transform: rotate(90deg);
+        transform-origin: center; // Adjust as needed
+    }
+    
+
+    &__logo {
+        height: 60px;
+        margin-left: 0rem;
+    }
+
+    &__article {
+        margin-inline: 1rem;
+        margin-top: 6rem;
+        
+        &__hello {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: $white;
+            font-size: 0.7rem;
+            margin-bottom: 1rem;
+        }
+
+        &__name {
+            font-size: 4rem;
+            color: $white;
+            font-family: Calibre-Semibold;
+        }
+
+        &__role {
+            color: $neon;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 5px;
+        }
+
+        &__about {
+            color: $dark-gray;
+            font-size: 0.75rem;
+            margin-block: 1rem;
+            line-height: 1rem;
+            width: 80%;
+        }
+
+        &__button {
+            text-transform: uppercase;
+            background-color: $neon;
+            color: $black;
+            font-size: 0.6rem;
+            text-align: center;
+            font-family: Calibre-Semibold;
+            letter-spacing: 3px;
+            border: 1px solid transparent;
+            border-radius: 10rem;
+            padding: 0.87rem 2rem 0.74rem 2rem;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                background-color: $black;
+                border-color: $white;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,33 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.burger-menu {
+    background-color: #000;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    z-index: 10;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__line {
+        width: 20px;
+        height: 2px;
+        margin: 4px 0;
+        transition: .4s;
+        background-color: #fff;
+        border-radius: 1rem;
+
+        &:nth-of-type(2) {
+            width: 29px;
+        }
+    }
+}
