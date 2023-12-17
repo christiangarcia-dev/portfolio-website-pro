@@ -1,33 +1,94 @@
-@use '../../styles/partials/global' as *;
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.burger-menu {
-    background-color: #000;
-    position: absolute;
-    right: 1.5rem;
-    top: 1rem;
-    z-index: 10;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    position: fixed;
+.navbar {
     display: flex;
-    flex-direction: column;
+    position: relative;
+    margin-top: 2rem;
     align-items: center;
-    justify-content: center;
 
-    &__line {
-        width: 20px;
-        height: 2px;
-        margin: 4px 0;
-        transition: .4s;
-        background-color: #fff;
-        border-radius: 1rem;
+    @include tablet {
+        margin-inline: 3rem;
+    }
 
-        &:nth-of-type(2) {
-            width: 29px;
+    @include desktop {
+        margin-inline: 7rem;
+    }
+
+    &__logo {
+        height: 3.9rem;
+        margin-inline: auto;
+        z-index: 10;
+
+        @include tablet {
+            margin-inline: 0;
+            margin-right: 4rem;
+            cursor: pointer;
+        }
+
+        @include desktop {
+            margin-right: 5rem;
+        }
+    }
+
+    &__options {
+        display: none;
+
+        @include tablet {
+            display: contents;
+        }
+
+        &__group {
+            display: flex;
+            gap: 4.5vw;
+
+            @include desktop {
+                gap: 2.8rem;
+            }
+            
+            &--item {
+                background: transparent;
+                border: none;    
+                font-size: 0.9rem;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        }
+
+        &__contact {
+            background-color: $color-gray-button;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding-inline: 1.51rem;
+            height: 2.7rem;
+            margin-left: auto;
+            cursor: pointer;
+
+            @include desktop {
+                padding-inline: 2.1rem;
+            }
+        }
+    }
+
+    &__burger-menu {
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+        padding-right: 1rem;
+        z-index: 10;
+        cursor: pointer;
+
+        @include tablet {
+            display: none;
+        }
+
+        &--line {
+            width: 1.55rem;
+            height: 3.6px;
+            background-color: $color-white;
+            margin-bottom: 0.26rem;
         }
     }
 }
