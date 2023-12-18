@@ -36,12 +36,11 @@
         border: 1px solid $color-border;
         border-radius: 49px;
         margin-top: 3rem;
+        position: relative;
     }
 
     @include desktop {
         margin-inline: 7rem;
-        background-repeat: no-repeat;
-        background-size: cover;
         padding-block: 1.5rem;
     }
 
@@ -144,12 +143,12 @@
 
             @include tablet {
                 display: block;
-                height: 6rem;
+                height: 6rem; 
                 position: absolute;
                 z-index: 10;
-                top: 55.8%;
+                bottom: -3rem;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                transform: translateX(-50%);
                 cursor: pointer;
             }
         }
