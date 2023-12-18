@@ -15,6 +15,12 @@ body {
 
 @font-face {
     font-family: 'Poppins';
+    src: url('../../assets/fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Poppins';
     src: url('../../assets/fonts/Poppins-Regular.ttf') format('truetype');
     font-weight: 400;
 }
