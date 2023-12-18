@@ -1,5 +1,6 @@
 import '../Navbar/Navbar.scss'
 import logoOrange from '../../assets/logo/logo-orange.svg'
+import hamburgerMenu from '../../assets/icons/hamburger.svg'
 import circleGradient from '../../assets/images/gradient-circle.svg'
 
 function Navbar() {
@@ -17,11 +18,7 @@ function Navbar() {
                 </div>
                 <button className='navbar__options__contact'>Contact Me</button>
             </section>
-            <div className='navbar__burger-menu'>
-                <div className='navbar__burger-menu--line'></div>
-                <div className='navbar__burger-menu--line'></div>
-                <div className='navbar__burger-menu--line'></div>
-            </div>
+            <img className='navbar__burger-menu' src={hamburgerMenu}></img>
         </nav>
     )
 }

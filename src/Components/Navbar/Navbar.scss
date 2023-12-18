@@ -74,21 +74,14 @@
 
     &__burger-menu {
         position: absolute;
+        height: 1.4rem;
         right: 1rem;
-        top: 0rem;
-        padding-right: 1rem;
+        top: -0.3rem;
         z-index: 10;
         cursor: pointer;
 
         @include tablet {
             display: none;
-        }
-
-        &--line {
-            width: 1.4rem;
-            height: 3.1px;
-            background-color: $color-white;
-            margin-bottom: 0.26rem;
         }
     }
 }
