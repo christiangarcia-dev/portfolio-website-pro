@@ -1,0 +1,84 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.projects {
+
+    &__intro {
+        margin-top: 5rem;
+        margin-inline: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        &__header {
+            text-align: center;
+            padding-bottom: 1rem;
+            font-size: 1.9rem;
+            font-weight: 500;
+        }
+
+        &__paragraph {
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: #8A898E;
+            line-height: 1.5rem;
+        }
+    }
+
+    &__swiper {
+        overflow: hidden; // Hide the overflowed parts of images
+        position: relative; // Set position for swiper container
+        margin-top: 2.5rem;
+        margin-inline: 2rem;
+        border-radius: 10px;
+
+        &__container {
+            display: flex; // Display images in a row
+            transition: transform 0.3s ease; // Smooth transition for the swipe effect
+            border-radius: 10px;
+            height: 12rem;
+        }
+
+        &__item {
+            position: relative;
+            flex: 0 0 100%; // Each image takes full width of the container
+            max-width: 100%; // Ensure image doesn't overflow its container
+            display: block; // Remove bottom margin from inline images
+            border-radius: 10px;
+        }
+
+        &__project-name {
+            position: absolute;
+            bottom: 0; // Position the name at the bottom of the item
+            width: 100%; // Full width
+            text-align: center; // Center the text
+        }
+    }
+
+    &__horizontal-line {
+        border-top: 1px solid #3C3B47;
+        position: relative;
+        height: 1px;
+        margin-top: 10rem; // to be changed 
+    }
+
+    &__arrow-icon {
+        position: absolute;
+        height: 4rem;
+        z-index: 10;
+        top: 50%;
+        // left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: -3px;
+        cursor: pointer;
+
+        &:nth-of-type(1) {
+            left: 65%;
+        }
+
+        &:nth-of-type(2) {
+            left: 35%;
+            transform: translate(-50%, -50%) scaleX(-1);
+        }
+    }
+}
