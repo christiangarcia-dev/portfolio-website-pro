@@ -11,10 +11,10 @@ function Projects() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const projects = [
-        { name: 'Echo Lingo', image: EchoLingoImage },
-        { name: 'Data Connect', image: DataConnectImage },
-        { name: 'In Stock', image: InStockImage },
-        { name: 'Brain Flix', image: BrainFlixImage },
+        { name: 'EchoLingo', image: EchoLingoImage },
+        { name: 'DataConnect', image: DataConnectImage },
+        { name: 'InStock', image: InStockImage },
+        { name: 'BrainFlix', image: BrainFlixImage },
         // Add other projects as needed
     ];
 
@@ -37,12 +37,11 @@ function Projects() {
             <section className='projects__swiper'>
                 <div className='projects__swiper__container' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                     {projects.map((project, index) => (
-                        <div key={index} className={`projects__swiper__item ${currentIndex === index ? 'active' : ''}`}>
-                            <img src={project.image} alt={project.name} />
-                            <h1 className='projects__swiper__project-name'>{project.name}</h1>
-                        </div>
+                        <img key={index} src={project.image} alt={project.name} className={`projects__swiper__item ${currentIndex === index ? 'active' : ''}`} />
                     ))}
-                    
+                </div>
+                <div className='projects__swiper__name-container'>
+                    <h1 className='projects__swiper__project-name'>{projects[currentIndex].name}</h1>
                 </div>
             </section>
 

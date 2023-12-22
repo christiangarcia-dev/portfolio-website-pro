@@ -26,17 +26,16 @@
     }
 
     &__swiper {
-        overflow: hidden; // Hide the overflowed parts of images
-        position: relative; // Set position for swiper container
-        margin-top: 2.5rem;
+        overflow: hidden;
+        position: relative;
+        margin-top: 2rem;
         margin-inline: 2rem;
         border-radius: 10px;
 
         &__container {
-            display: flex; // Display images in a row
-            transition: transform 0.3s ease; // Smooth transition for the swipe effect
+            display: flex;
+            transition: transform 0.3s ease;
             border-radius: 10px;
-            height: 12rem;
         }
 
         &__item {
@@ -47,11 +46,12 @@
             border-radius: 10px;
         }
 
+        &__name-container {
+            margin-top: 2rem; 
+        }
+
         &__project-name {
-            position: absolute;
-            bottom: 0; // Position the name at the bottom of the item
-            width: 100%; // Full width
-            text-align: center; // Center the text
+            font-size: 1.3rem;
         }
     }
 
@@ -59,7 +59,7 @@
         border-top: 1px solid #3C3B47;
         position: relative;
         height: 1px;
-        margin-top: 10rem; // to be changed 
+        margin-block: 5rem; 
     }
 
     &__arrow-icon {
@@ -67,7 +67,6 @@
         height: 4rem;
         z-index: 10;
         top: 50%;
-        // left: 50%;
         transform: translate(-50%, -50%);
         margin-top: -3px;
         cursor: pointer;
