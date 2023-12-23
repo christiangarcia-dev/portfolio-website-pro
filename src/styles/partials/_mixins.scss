@@ -1,6 +1,12 @@
 @use '../partials/variables' as *;
 
 @mixin tablet {
+    @media (min-width: $mobile-large-breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet {
     @media (min-width: $tablet-breakpoint) {
         @content;
     }
