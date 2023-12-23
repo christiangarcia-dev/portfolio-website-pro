@@ -1,0 +1,119 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.skills {
+    margin-inline: 2rem;
+    margin-bottom: 5rem;
+
+    @include tablet {
+        margin-inline: 3rem;
+    }
+
+    @include desktop {
+        margin-inline: 10rem;
+    }
+
+    &__header {
+        font-size: 1.75rem;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            font-size: 2.1rem;
+            text-align: left;
+            width: 80%;
+            margin-inline: auto;
+        }
+    }
+
+    &__group-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            width: 80%;
+            margin-inline: auto;
+        }
+    }
+
+    &__subgroup-wrapper {
+        
+        @include tablet {
+            display: flex; 
+            flex-direction: column;
+            margin-right: 1.2rem;
+        }
+    }
+
+    &__box {
+        border-radius: 29px;
+        margin-bottom: 1rem;
+        padding: 2rem 1rem;
+
+        @include tablet {
+            // width: 41vw;
+        }
+
+        &--frontend {
+            background-color: $color-orange;
+        }
+
+        &--backend {
+            background-color: $color-gray-card;
+        }
+
+        &--design {
+            background-color: $color-purple;
+            
+            @include tablet {
+                padding-bottom: 0;
+                position: relative;
+            }
+
+            &-image {
+                display: none;
+
+                @include tablet {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%; 
+                    transform: translateX(-50%); 
+                    max-height: 52%;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        &__header {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+        }
+
+        &__list {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+
+            &--item {
+                background-color: $color-main;
+                font-size: 0.8rem;
+                padding: 0.4rem 1rem;
+                border-radius: 144px;
+                margin: 0.5rem;
+                cursor: pointer;
+
+                @include tablet {
+                    &:hover {
+                        background-color: $color-white;
+                        color: $color-main;
+                    }
+                }
+            }
+        }
+    }
+}

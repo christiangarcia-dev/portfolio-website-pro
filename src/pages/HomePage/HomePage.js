@@ -1,6 +1,7 @@
 import "./HomePage.scss";
 import Header from "../../Components/Header/Header";
 import Projects from "../../Components/Projects/Projects";
+import Skills from "../../Components/Skills/Skills";
 
 function HomePage() {
 
@@ -9,6 +10,7 @@ function HomePage() {
             <Header />
             <main>
                 <Projects />
+                <Skills />
             </main>
         </>
     )

@@ -12,12 +12,17 @@
         @include tablet {
             flex-direction: row;
             align-items: center;
+            margin-inline: 3rem;
+        }
+
+        @include desktop {
+            margin-inline: 7rem;
         }
 
         &__header {
             text-align: center;
             padding-bottom: 1rem;
-            font-size: 1.9rem;
+            font-size: 1.75rem;
             font-weight: 500;
 
             @include tablet {
@@ -38,7 +43,7 @@
             @include tablet {
                 border-left: 1px solid $color-border;
                 width: 50%;
-                padding-right: 20%;
+                padding-right: 5%;
                 padding-left: 3rem;
                 text-align: left;
             }
@@ -55,6 +60,14 @@
         @include tablet {
             border: 1px solid $color-border;
             padding: 2rem;
+            margin-left: 3rem;
+            margin-right: 0;
+            margin-top: 0;
+            border-radius: 49px 0 0 49px;
+        }
+
+        @include desktop {
+            margin-left: 7rem;
         }
 
         &__container {
