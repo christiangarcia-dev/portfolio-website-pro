@@ -8,6 +8,10 @@
         font-size: 1.75rem;
         font-weight: 500;
         margin-bottom: 1rem;
+
+        @include tablet {
+            font-size: 2.1rem;
+        }
     }
 
     &__card-container {
@@ -16,6 +20,10 @@
         gap: 1rem;
         width: max-content;
         transition: transform 0.3s ease-in-out;
+
+        @include large {
+            margin-bottom: 2rem;
+        }
     }
 
     &__card {
@@ -37,7 +45,7 @@
         }
 
         &__check {
-            height: 0.8rem;
+            height: 0.7rem;
         }
 
         &--degree {
@@ -49,6 +57,7 @@
         &--institution {
             font-size: 0.75rem;
             color: $color-gray-text;
+            opacity: 70%;
             margin-bottom: 1rem;
         }
 
@@ -56,12 +65,18 @@
             background: transparent;
             border: none;
             display: flex;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
+            font-size: 0.8rem;
             font-weight: 500;
             margin-bottom: 1rem;
             margin-top: auto;
+            text-decoration: none;
             cursor: pointer;
+
+            &:nth-of-type(4) {
+                color: rgba($color: #FFF, $alpha: 0.5);
+            }
 
             &-icon {
                 height: 0.9rem;
@@ -77,6 +92,10 @@
         align-items: center;
         gap: 3rem;
         margin-bottom: 2rem;
+
+        @include large {
+            display: none;
+        }
 
         &--next {
             height: 4.5rem;
