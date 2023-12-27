@@ -1,0 +1,92 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.education {
+    margin-inline: 2rem;
+
+    &__header {
+        font-size: 1.75rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    &__card-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: max-content;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &__card {
+        border-radius: 10px;
+        background: $education-card-gradient;
+        padding: 1rem 2rem 1rem 1rem;
+        width: 12rem;
+        height: 17rem;
+
+        &__checkbox {
+            background-color: $color-main;
+            border-radius: 9px;
+            width: min-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.73rem 0.6rem;
+            margin-bottom: 1rem;
+        }
+
+        &__check {
+            height: 0.8rem;
+        }
+
+        &--degree {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        &--institution {
+            font-size: 0.75rem;
+            color: $color-gray-text;
+            margin-bottom: 1rem;
+        }
+
+        &--download {
+            background: transparent;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            margin-top: auto;
+            cursor: pointer;
+
+            &-icon {
+                height: 0.9rem;
+                padding-right: 0.5rem;
+            }
+        }
+    }
+
+    &__swiper__buttons {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        margin-bottom: 2rem;
+
+        &--next {
+            height: 4.5rem;
+            cursor: pointer;
+        }
+
+        &--previous {
+            height: 4.5rem;
+            cursor: pointer;
+            transform: scaleX(-1);
+        }
+    }
+}
