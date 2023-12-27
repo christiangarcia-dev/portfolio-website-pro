@@ -4,6 +4,14 @@
 .education {
     margin-inline: 2rem;
 
+    @include tablet {
+        margin-inline: 3rem;
+    }
+
+    @include desktop {
+        margin-inline: 7rem;
+    }
+
     &__header {
         font-size: 1.75rem;
         font-weight: 500;
@@ -73,10 +81,6 @@
             margin-top: auto;
             text-decoration: none;
             cursor: pointer;
-
-            &:nth-of-type(4) {
-                color: rgba($color: #FFF, $alpha: 0.5);
-            }
 
             &-icon {
                 height: 0.9rem;

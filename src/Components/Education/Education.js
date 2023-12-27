@@ -31,7 +31,7 @@ function Education() {
                     </div>
                     <p className='education__card--degree'>B.A in Computer Science</p>
                     <p className='education__card--institution'>George Washington University - Diploma</p>
-                    <a href={gwuPdfFile} download='gwu-diploma.pdf' className='education__card--download'><img className='education__card--download-icon' src={downloadIcon}></img> Download PDF</a>
+                    <a className='education__card--download' href={gwuPdfFile} download='gwu-diploma.pdf'><img className='education__card--download-icon' src={downloadIcon}></img> Download PDF</a>
                 </div>
                 <div className='education__card'>
                     <div className='education__card__checkbox'>
@@ -39,7 +39,7 @@ function Education() {
                     </div>
                     <p className='education__card--degree'>B.A in Interaction Design</p>
                     <p className='education__card--institution'>George Washington University - Diploma</p>
-                    <a href={gwuPdfFile} download='gwu-diploma.pdf' className='education__card--download'><img className='education__card--download-icon' src={downloadIcon}></img> Download PDF</a>
+                    <a className='education__card--download' href={gwuPdfFile} download='gwu-diploma.pdf'><img className='education__card--download-icon' src={downloadIcon}></img> Download PDF</a>
                 </div>
                 <div className='education__card'>
                     <div className='education__card__checkbox'>
@@ -47,7 +47,7 @@ function Education() {
                     </div>
                     <p className='education__card--degree'>Software Engineering Bootcamp</p>
                     <p className='education__card--institution'>BrainStation | Miami | 12 weeks - Diploma</p>
-                    <a href={bsPdfFile} download='brainstation-diploma.pdf' className='education__card--download'><img className='education__card--download-icon' src={downloadIcon}></img> Download PDF</a>
+                    <a className='education__card--download' href={bsPdfFile} download='brainstation-diploma.pdf'><img className='education__card--download-icon' src={downloadIcon}></img> Download PDF</a>
                 </div>
                 <div className='education__card'>
                     <div className='education__card__checkbox'>
