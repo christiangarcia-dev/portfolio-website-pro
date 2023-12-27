@@ -41,6 +41,14 @@
         width: 12rem;
         height: 17rem;
 
+        &:nth-child(4) {
+            .education__card--download {
+                opacity: 0.6; 
+                pointer-events: none; 
+                cursor: default; 
+            }
+        }
+
         &__checkbox {
             background-color: $color-main;
             border-radius: 9px;
