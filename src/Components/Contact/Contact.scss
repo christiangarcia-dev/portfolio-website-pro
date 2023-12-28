@@ -1,26 +1,46 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
+
+.contact > * {
+    background-color: $color-main;
+}
 .contact {
-    z-index: 10;
-    border: 1px soild red; // revisit 
+    z-index: 100;
     outline: 1px solid $color-border;
     border-radius: 49px;
-    padding: 1rem ;
+    margin-bottom: 2rem;
+    background-color: $color-main;
+    position: relative;
+    width: 100%;
 
     &__moon {
+        position: absolute;
+        top: 1%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        width: 105%;
+        height: auto;
+        max-height: 644px;
+        max-width: 644px;
+        opacity: 50%;
 
+        @include tablet {
+            width: 60%;
+        }
     }
 
     &__top {
+        border-radius: 49px 49px 0 0;
 
         &__header {
             font-size: 1.7rem;
             font-weight: 500;
             width: 55%;
             text-align: center;
-            margin-top: 0.5rem;
-            margin-bottom: 1rem;
+            padding-top: 1.5rem;
+            padding-bottom: 0.5rem;
             margin-inline: auto;
         }
 
@@ -94,10 +114,15 @@
             border: 1px solid transparent;
             border-radius: 5px;
             margin-block: 1.2rem;
-            padding-block: 0.8rem;
+            padding-block: 0.95rem;
+            font-size: 1rem;
             font-weight: 500;
             transition: ease-in-out 0.2s;
             cursor: pointer;
+
+            @include tablet {
+                margin-bottom: 3.3rem;
+            }
 
             &:hover {
                 background-color: rgb(255, 255, 255);
@@ -109,11 +134,15 @@
 
     &__bottom {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 1rem;
         margin-top: 1rem;
         margin-bottom: 2rem;
+        padding-bottom: 3rem;
+
+        @include tablet {
+            display: none;
+        }
 
         &__socials--box {
             background: $education-card-gradient;
@@ -125,8 +154,17 @@
         }
 
         &__socials--icon {
-            height: 4rem;
+            min-height: 4.3rem;
+            height: 15vw;
+            max-height: 4.7rem;
             padding: 1rem;
         }
+    }
+
+    &__form,
+    &__top,
+    &__bottom {
+        z-index: 2;
+        padding-inline: 1.4rem;
     }
 }

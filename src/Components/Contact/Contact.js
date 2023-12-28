@@ -9,7 +9,7 @@ function Contact() {
 
     return (
         <section className='contact'>
-            {/* <img className='contact__moon' src={moonImage}></img> */}
+            <img className='contact__moon' src={moonImage}></img>
             <div className='contact__top'>
                 <h1 className='contact__top__header'>Feel Free to Get in Touch with me</h1>
                 <div className='contact__top__socials'>
