@@ -23,3 +23,5 @@ $gradient-ellipse-purple: rgba(119, 97, 255, 0);
 // Gradients 
 $education-card-gradient: linear-gradient(to bottom, $gradient-card-full, $gradient-card-opaque);
 $ellipse-gradient: radial-gradient($gradient-ellipse-orange, $gradient-ellipse-purple); // might need direction 
+
+$color-input-border: rgba(255, 255, 255, 0.5)

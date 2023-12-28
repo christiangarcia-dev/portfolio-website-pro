@@ -1,0 +1,132 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.contact {
+    z-index: 10;
+    border: 1px soild red; // revisit 
+    outline: 1px solid $color-border;
+    border-radius: 49px;
+    padding: 1rem ;
+
+    &__moon {
+
+    }
+
+    &__top {
+
+        &__header {
+            font-size: 1.7rem;
+            font-weight: 500;
+            width: 55%;
+            text-align: center;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            margin-inline: auto;
+        }
+
+        &__socials {
+            display: none;
+
+            &--box {
+
+            }
+
+            &--icon {
+
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        &__input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__label {
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        &__input {
+            margin-bottom: 1rem;
+            border: none;
+            border-bottom: 1px solid $color-input-border;
+            background-color: transparent;
+            padding-bottom: 1rem;
+            color: $color-gray-text-form;
+            display: flex;
+            align-items: center;
+
+            &::placeholder {
+                font-size: 0.9rem;
+                color: $color-gray-text-form;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: $color-input-border; 
+            }
+
+            &:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 1000px transparent inset; 
+                -webkit-text-fill-color: $color-gray-text-form; 
+                transition: background-color 5000s ease-in-out 0s; 
+            }
+
+            &:-webkit-autofill:focus {
+                -webkit-box-shadow: 0 0 0 1000px transparent inset;
+                -webkit-text-fill-color: $color-gray-text-form;
+            }
+
+            &--textarea {
+                resize: none;
+                height: 10rem;
+            }
+        }
+
+        &__submit {
+            background-color: $color-purple;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            margin-block: 1.2rem;
+            padding-block: 0.8rem;
+            font-weight: 500;
+            transition: ease-in-out 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(255, 255, 255);
+                color: $color-main;
+                border: 2px solid $color-purple;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+
+        &__socials--box {
+            background: $education-card-gradient;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        &__socials--icon {
+            height: 4rem;
+            padding: 1rem;
+        }
+    }
+}
