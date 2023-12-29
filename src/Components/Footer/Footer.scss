@@ -1,3 +1,35 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__logo {
+        height: 4rem;
+        margin-top: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    &__closer {
+        font-size: 0.9rem;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.5rem;
+        color: $color-gray-text;
+        width: 77%;
+        margin-bottom: 3rem;
+    }
+
+    &__copyright {
+        font-size: 0.9rem;
+        font-weight: 300;
+        text-align: center;
+        color: $color-gray-text;
+        border-top: 1px solid $color-border;
+        padding-block: 1.85rem;
+        width: 100%;
+    }
+}
