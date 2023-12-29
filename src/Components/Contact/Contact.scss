@@ -5,6 +5,7 @@
 .contact > * {
     background-color: $color-main;
 }
+
 .contact {
     z-index: 100;
     outline: 1px solid $color-border;
@@ -12,7 +13,14 @@
     margin-bottom: 2rem;
     background-color: $color-main;
     position: relative;
-    width: 100%;
+
+    @include tablet {
+        margin-inline: 3rem;
+    }
+
+    @include desktop {
+        margin-inline: 7rem;
+    }
 
     &__moon {
         position: absolute;
@@ -27,12 +35,25 @@
         opacity: 50%;
 
         @include tablet {
-            width: 60%;
+            width: 65%;
+            max-height: 700px;
+            max-width: 700px;
+        }
+
+        @include desktop {
+            top: 2%;
         }
     }
 
     &__top {
         border-radius: 49px 49px 0 0;
+
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+        }
 
         &__header {
             font-size: 1.7rem;
@@ -42,17 +63,50 @@
             padding-top: 1.5rem;
             padding-bottom: 0.5rem;
             margin-inline: auto;
+
+            @include tablet {
+                font-size: 2.1rem;
+            }
+
+            @include desktop {
+                text-align: left;
+                margin: 0;
+                font-size: 4rem;
+                font-weight: 400;
+                width: 43%;
+            }
         }
 
         &__socials {
             display: none;
 
-            &--box {
+            @include desktop {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                height: auto;
+                padding-top: 1.5rem;
+            }   
 
+            &--wrapper {
+                display: flex;
+                gap: 1rem;
+            }
+
+            &--box {
+                background: $education-card-gradient;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+                cursor: pointer;
             }
 
             &--icon {
-
+                min-height: 4.3rem;
+                height: auto;
+                max-height: 88px;
+                padding: 1rem;
             }
         }
     }
@@ -64,12 +118,32 @@
         &__input-group {
             display: flex;
             flex-direction: column;
+
+            @include desktop {
+                flex-direction: row;
+                width: 100%;
+                gap: 2rem;
+            }
+        }
+
+        &__input-subgroup {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop {
+                width: 100%;
+            }
         }
 
         &__label {
             font-weight: 600;
             margin-top: 1rem;
             margin-bottom: 1rem;
+
+            @include desktop {
+                display: block;
+                padding-left: 2rem;
+            }
         }
 
         &__input {
@@ -81,6 +155,11 @@
             color: $color-gray-text-form;
             display: flex;
             align-items: center;
+            width: 100%;
+
+            @include desktop {
+                padding-left: 2rem;
+            }
 
             &::placeholder {
                 font-size: 0.9rem;
@@ -106,6 +185,10 @@
             &--textarea {
                 resize: none;
                 height: 10rem;
+
+                @include desktop {
+                    height: 7rem;
+                }
             }
         }
 
@@ -166,5 +249,9 @@
     &__bottom {
         z-index: 2;
         padding-inline: 1.4rem;
+
+        @include tablet {
+            padding-inline: 3rem;
+        }
     }
 }

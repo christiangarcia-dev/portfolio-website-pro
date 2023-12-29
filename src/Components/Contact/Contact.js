@@ -13,34 +13,44 @@ function Contact() {
             <div className='contact__top'>
                 <h1 className='contact__top__header'>Feel Free to Get in Touch with me</h1>
                 <div className='contact__top__socials'>
-                    <div className='contact__top__socials--box'>
-                        <img className='contact__top__socials--icon' src={githubIcon}></img>
+                    <div className='contact__top__socials--wrapper'>
+                        <div className='contact__top__socials--box'>
+                            <img className='contact__top__socials--icon' src={githubIcon}></img>
+                        </div>
+                        <div className='contact__top__socials--box'>
+                            <img className='contact__top__socials--icon' src={mediumIcon}></img>
+                        </div>
                     </div>
-                    <div className='contact__top__socials--box'>
-                        <img className='contact__top__socials--icon' src={mediumIcon}></img>
-                    </div>
-                    <div className='contact__top__socials--box'>
-                        <img className='contact__top__socials--icon' src={linkedinIcon}></img>
-                    </div>
-                    <div className='contact__top__socials--box'>
-                        <img className='contact__top__socials--icon' src={mailIcon}></img>
+                    <div className='contact__top__socials--wrapper'>
+                        <div className='contact__top__socials--box'>
+                            <img className='contact__top__socials--icon' src={linkedinIcon}></img>
+                        </div>
+                        <div className='contact__top__socials--box'>
+                            <img className='contact__top__socials--icon' src={mailIcon}></img>
+                        </div>
                     </div>
                 </div>
             </div>
             <form className='contact__form'>
                 <div className='contact__form__input-group'>
-                    <label className='contact__form__label'>Name</label>
-                    <input className='contact__form__input' placeholder='John'></input>
-
-                    <label className='contact__form__label'>Surname</label>
-                    <input className='contact__form__input' placeholder='Johnson'></input>
+                    <div className='contact__form__input-subgroup'>
+                        <label className='contact__form__label'>Name</label>
+                        <input className='contact__form__input' placeholder='John'></input>
+                    </div>
+                    <div className='contact__form__input-subgroup'>
+                        <label className='contact__form__label'>Surname</label>
+                        <input className='contact__form__input' placeholder='Johnson'></input>
+                    </div>
                 </div>
                 <div className='contact__form__input-group'>
-                    <label className='contact__form__label'>Email Address</label>
-                    <input className='contact__form__input' placeholder='johnjohnson@gmail.com'></input>
-
-                    <label className='contact__form__label'>Phone Number</label>
-                    <input className='contact__form__input' placeholder='+1 457 584 4567'></input>
+                    <div className='contact__form__input-subgroup'>
+                        <label className='contact__form__label'>Email Address</label>
+                        <input className='contact__form__input' placeholder='johnjohnson@gmail.com'></input>
+                    </div>
+                    <div className='contact__form__input-subgroup'>
+                        <label className='contact__form__label'>Phone Number</label>
+                        <input className='contact__form__input' placeholder='+1 457 584 4567'></input>
+                    </div>
                 </div>
 
                 <label className='contact__form__label'>About Project</label>
