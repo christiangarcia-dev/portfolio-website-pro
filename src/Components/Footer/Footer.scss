@@ -10,7 +10,11 @@
     &__logo {
         height: 4rem;
         margin-top: 1.6rem;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
+
+        @include tablet {
+            height: 4.7rem;
+        }
     }
 
     &__closer {
@@ -21,6 +25,14 @@
         color: $color-gray-text;
         width: 77%;
         margin-bottom: 3rem;
+
+        @include tablet {
+            width: 47%;
+        }
+
+        @include desktop {
+
+        }
     }
 
     &__copyright {
@@ -31,5 +43,17 @@
         border-top: 1px solid $color-border;
         padding-block: 1.85rem;
         width: 100%;
+
+        @include tablet {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid $color-border;
+            border-radius: 49px;
+            width: 57%;
+            padding-block: 1.35rem;
+        }
+
+        @include desktop {
+            
+        }
     }
 }
