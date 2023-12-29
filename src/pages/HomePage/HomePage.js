@@ -5,6 +5,7 @@ import Skills from "../../Components/Skills/Skills";
 import AboutMe from "../../Components/AboutMe/AboutMe";
 import Education from "../../Components/Education/Education";
 import Contact from "../../Components/Contact/Contact";
+import Footer from "../../Components/Footer/Footer";
 
 function HomePage() {
 
@@ -18,6 +19,7 @@ function HomePage() {
                 <Education />
                 <Contact />
             </main>
+            <Footer />
         </>
     )
 }
