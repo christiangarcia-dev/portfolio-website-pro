@@ -1,10 +1,11 @@
 import './Projects.scss'
 import React, { useState } from 'react';
 import circleArrowIcon from '../../assets/icons/arrow.svg'
-import EchoLingoImage from '../../assets/images/projects/echolingo.png';
+import EchoLingoImage from '../../assets/images/projects/echolingo1.png';
 import DataConnectImage from '../../assets/images/projects/dataconnect.jpeg';
-import InStockImage from '../../assets/images/projects/instock.jpeg';
+import InStockImage from '../../assets/images/projects/instock.png';
 import BrainFlixImage from '../../assets/images/projects/brainflix.png';
+import SpaceTourismImage from '../../assets/images/projects/spacetourism.png';
 
 function Projects() {
 
@@ -15,7 +16,7 @@ function Projects() {
         { name: 'DataConnect', image: DataConnectImage },
         { name: 'InStock', image: InStockImage },
         { name: 'BrainFlix', image: BrainFlixImage },
-        // Add other projects as needed
+        { name: 'SpaceTourism', image: SpaceTourismImage },
     ];
 
     const goToNext = () => {
