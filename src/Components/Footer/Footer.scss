@@ -6,6 +6,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+
+    &__circle-gradient {
+        position: absolute;
+        z-index: -1;
+        height: 115vw;
+        top: -3rem;
+        right: 50%;
+        transform: translate(50%, -50%);
+
+        @include tablet {
+            right: 20%;
+            top: -6rem;
+            height: 60vw;
+        }
+
+        &--2 {
+            display: none;
+
+            @include tablet {
+                // display: block;
+            }
+        }
+    }
 
     &__logo {
         height: 4rem;
@@ -40,9 +64,11 @@
         font-weight: 300;
         text-align: center;
         color: $color-gray-text;
+        background-color: $color-main;
         border-top: 1px solid $color-border;
         padding-block: 1.85rem;
         width: 100%;
+        margin-top: 1rem;
 
         @include tablet {
             margin-bottom: 3rem;

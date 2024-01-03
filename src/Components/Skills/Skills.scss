@@ -7,6 +7,7 @@
 
     @include tablet {
         margin-inline: 3rem;
+        margin-bottom: 8rem;
     }
 
     @include desktop {
@@ -24,6 +25,10 @@
             text-align: left;
             width: 80%;
             margin-inline: auto;
+        }
+
+        @include desktop {
+            font-size: 2.5rem;
         }
     }
 

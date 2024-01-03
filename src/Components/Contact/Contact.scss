@@ -120,6 +120,10 @@
         display: flex;
         flex-direction: column;
 
+        @include tablet {
+            border-radius: 0 0 49px 49px;
+        }
+
         &__input-group {
             display: flex;
             flex-direction: column;
@@ -227,6 +231,7 @@
         margin-top: 1rem;
         margin-bottom: 2rem;
         padding-bottom: 3rem;
+        border-radius: 0 0 49px 49px;
 
         @include tablet {
             display: none;
