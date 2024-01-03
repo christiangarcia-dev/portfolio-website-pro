@@ -26,7 +26,13 @@
             display: none;
 
             @include tablet {
-                // display: block;
+                display: flex;
+                position: absolute;
+                height: 85vw;
+                z-index: -1;
+                left: 0;
+                bottom: 0;
+                transform: translate(-50%, 50%);
             }
         }
     }
