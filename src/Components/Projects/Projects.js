@@ -22,8 +22,7 @@ function Projects() {
     const goToNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
     };
-
-    // Go to the previous project
+    
     const goToPrev = () => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? projects.length - 1 : prevIndex - 1));
     };

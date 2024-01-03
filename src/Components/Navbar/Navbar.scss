@@ -31,6 +31,23 @@
         }
     }
 
+    &__circle-gradient {
+        position: absolute;
+        z-index: -1;
+        height: 170vw;
+        right: 0;
+        top: 0;
+        transform: translate(50%, -50%);
+
+        @include large {
+            height: 140vw;
+        }
+
+        @include desktop {
+            height: 100vw;
+        }
+    }
+
     &__options {
         display: none;
 
