@@ -44,6 +44,7 @@
             font-weight: 300;
             color: #8A898E;
             line-height: 1.5rem;
+            color: $color-main;
 
             @include tablet {
                 border-left: 1px solid $color-border;
@@ -67,14 +68,15 @@
         border-radius: 10px;
         
         @include tablet {
+            overflow: visible;
             border: 1px solid $color-border;
             padding: 2rem;
             margin-left: 3rem;
             margin-right: 0;
             margin-top: 0;
+            margin-bottom: 4rem;
             border-radius: 49px 0 0 49px;
             padding: 2rem 3rem;
-            
         }
 
         @include desktop {
@@ -105,10 +107,6 @@
 
         &__name-container {
             margin-top: 2rem; 
-
-            // @include tablet {
-            //     margin-top: 1.5rem;
-            // }
         }
 
         &__project-name {
@@ -121,6 +119,10 @@
         position: relative;
         height: 1px;
         margin-block: 5rem; 
+
+        @include tablet {
+            display: none;
+        }
     }
 
     &__arrow-icon {
@@ -139,6 +141,38 @@
         &:nth-of-type(2) {
             left: 41%;
             transform: translate(-50%, -50%) scaleX(-1);
+        }
+
+        &--tablet {
+            display: none;
+
+            @include tablet {
+                display: block;
+                height: 4rem;
+                z-index: 2000;
+            }
+
+            &:nth-of-type(1) {
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    &__arrow__group  {
+        display: none;
+
+        @include tablet {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            bottom: -1.85rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            z-index: 500;
+            gap: 3rem;
+            z-index: 1000;
         }
     }
 }

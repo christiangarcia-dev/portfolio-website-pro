@@ -43,6 +43,10 @@ function Projects() {
                 <div className='projects__swiper__name-container'>
                     <h1 className='projects__swiper__project-name'>{projects[currentIndex].name}</h1>
                 </div>
+                <div className='projects__arrow__group'>
+                    <img className='projects__arrow-icon--tablet' src={circleArrowIcon} onClick={goToNext}></img>
+                    <img className='projects__arrow-icon--tablet' src={circleArrowIcon} onClick={goToPrev}></img>
+                </div>
             </section>
 
             <div className='projects__horizontal-line'>
