@@ -1,12 +1,17 @@
 import './AboutMe.scss'
-
 import resumePdfFile from '../../assets/documents/Resume-CG.pdf';
 import headshot from '../../assets/images/headshot.jpeg'
+import circleGradient from '../../assets/images/gradient-circle.svg'
+import elipseGradient from '../../assets/images/gradient-elipse.svg'
 
 function AboutMe() {
 
     return (
         <section className='about'>
+            <img className='about__circle-gradient' src={circleGradient}></img>
+            <img className='about__elipse-gradient--1' src={elipseGradient}></img>
+            <img className='about__elipse-gradient--2' src={elipseGradient}></img>
+            <img className='about__elipse-gradient--3' src={elipseGradient}></img>
             <div className='about__outer-circle'>
                 <div className='about__inner-circle'>
                     <div className='about__headshot-wrapper'>

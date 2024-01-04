@@ -8,6 +8,7 @@
     padding: 5.5rem 1.5rem 2rem 1.5rem;
     text-align: center;
     margin-bottom: 3rem;
+    background-color: $color-main;
 
     @include tablet {
         padding: 1.5rem;
@@ -18,6 +19,96 @@
 
     @include desktop {
         width: 70%;
+    }
+
+    &__circle-gradient {
+        position: absolute;
+        z-index: -1;
+        height: 145vw;
+        top: 2rem;
+        right: 50%;
+        transform: translate(50%, -50%);
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__elipse-gradient--1 {
+        display: none;
+
+        @include tablet {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            height: 57.7rem;
+            width: 32.8rem;
+            top: 3rem;
+            right: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        @include large {
+            height: 69.24rem;
+            width: 39.36rem;
+        }
+
+        @include desktop {
+            height: 76.16rem;
+            width: 43.3rem;
+        }
+    }
+
+    &__elipse-gradient--2 {
+        display: none;
+
+        @include tablet {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            height: 57.7rem;
+            width: 42.7rem;
+            top: -12.5rem;
+            right: 20%;
+        }
+
+        @include large {
+            height: 69.24rem;
+            width: 51.24rem;
+            top: -20rem;
+        }
+
+        @include desktop {
+            height: 76.16rem;
+            width: 56.36rem;
+            top: -23rem;
+        }
+    }
+
+    &__elipse-gradient--3 {
+        display: none;
+
+        @include tablet {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            height: 57.7rem;
+            width: 42.7rem;
+            top: -12.5rem;
+            left: 20%;
+        }
+
+        @include large {
+            height: 69.24rem;
+            width: 51.24rem;
+            top: -20rem;
+        }
+
+        @include desktop {
+            height: 76.16rem;
+            width: 56.36rem;
+            top: -23rem;
+        }
     }
 
     &__outer-circle {
