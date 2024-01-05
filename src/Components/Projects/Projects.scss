@@ -13,6 +13,7 @@
             flex-direction: row;
             align-items: center;
             margin-inline: 3rem;
+            margin-bottom: 1rem;
         }
 
         @include desktop {
@@ -44,7 +45,7 @@
             font-weight: 300;
             color: #8A898E;
             line-height: 1.5rem;
-            color: $color-main;
+            margin-bottom: 2rem;
 
             @include tablet {
                 border-left: 1px solid $color-border;
@@ -60,6 +61,24 @@
         }
     }
 
+    &__container {
+        border: none;
+        border: 10px;
+        padding: 0;
+
+        @include tablet {
+            border: 1px solid $color-border;
+            border-radius: 49px 0 0 49px;
+            padding: 2rem;
+            margin-left: 3rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+
+
+    // old swiper:
+
     &__swiper {
         overflow: hidden;
         position: relative;
@@ -68,7 +87,6 @@
         border-radius: 10px;
         
         @include tablet {
-            overflow: visible;
             border: 1px solid $color-border;
             padding: 2rem;
             margin-left: 3rem;
@@ -87,6 +105,7 @@
             display: flex;
             transition: transform 0.3s ease;
             border-radius: 10px;
+            gap: 2rem;
         }
 
         &__item {
@@ -94,7 +113,6 @@
             flex: 0 0 100%; 
             width: 100%;
             max-width: 31.8125rem; 
-            margin-right: 2rem;
             display: block; 
             border-radius: 10px;
 
@@ -119,6 +137,11 @@
         position: relative;
         height: 1px;
         margin-block: 5rem; 
+        margin-inline: -2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
 
         @include tablet {
             display: none;
@@ -135,12 +158,12 @@
         cursor: pointer;
 
         &:nth-of-type(1) {
-            left: 59%;
+            left: 35%;
+            transform: translate(-50%, -50%) scaleX(-1);
         }
 
         &:nth-of-type(2) {
-            left: 41%;
-            transform: translate(-50%, -50%) scaleX(-1);
+            left: 65%;
         }
 
         &--tablet {
@@ -149,7 +172,7 @@
             @include tablet {
                 display: block;
                 height: 4rem;
-                z-index: 2000;
+                cursor: pointer;
             }
 
             &:nth-of-type(1) {
@@ -166,7 +189,7 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            bottom: -1.85rem;
+            bottom: -13.3rem;
             left: 50%;
             transform: translateX(-50%);
             width: auto;

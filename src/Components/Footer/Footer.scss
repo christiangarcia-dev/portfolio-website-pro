@@ -36,6 +36,17 @@
             }
         }
     }
+    &__circle-gradient--2-wrapper {
+        @include tablet {
+            overflow: hidden;
+            position: absolute;
+            left: 40%;
+            bottom: 0;
+            height: 42.5vw; /* Half of your image height */
+            transform: translateX(-50%);
+            width: 85vw; /* Full width of your image */
+        }
+    }
 
     &__logo {
         height: 4rem;
@@ -71,6 +82,7 @@
         text-align: center;
         color: $color-gray-text;
         background-color: $color-main;
+        z-index: 1000;
         border-top: 1px solid $color-border;
         padding-block: 1.85rem;
         width: 100%;

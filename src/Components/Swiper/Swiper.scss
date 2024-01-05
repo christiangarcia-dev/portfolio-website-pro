@@ -1,0 +1,97 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.custom-swiper-container {
+    position: relative;
+    margin-inline: 2rem;
+
+    @include tablet {
+        margin-inline: 0;
+    }
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: linear-gradient(45deg, $color-purple, $color-orange) !important;
+}
+
+.swiper {
+    width: 100%;
+    border-radius: 10px;
+
+    @include tablet {
+        border-radius: 20px;
+    }
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include tablet {
+        height: 23rem;
+        width: 67vw;
+    }
+}
+
+.swiper-button-prev, .swiper-button-next,
+.swiper-button-prev:after, .swiper-button-next:after {
+    display: none;
+}
+
+.custom-swiper-button-prev, .custom-swiper-button-next {
+    background-color: transparent;
+    border: none;
+}
+
+.custom-swiper-icon-prev, .custom-swiper-icon-next {
+    
+} 
+
+.name {
+
+    @include tablet {
+        position: absolute;
+        bottom: 0;
+        z-index: 1000;
+        background-color: $color-main;
+        border: 1px solid $color-main;
+        padding: 1rem 8rem 1.5rem 2rem;
+        margin-left: -1rem;
+        color: $color-white;
+        
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1; /* Place it behind the text */
+        background-color: $color-main;
+        border: 1px solid $color-main;
+        transform: skewX(34deg);
+        transform-origin: top right;
+    }
+
+    .name h1 {
+        display: inline-block; /* Allows the transform to be applied correctly */
+        transform: skewX(-34deg);
+        transform-origin: top right; /* Aligns with the pseudo-element's origin */
+    }
+}

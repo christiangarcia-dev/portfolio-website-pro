@@ -17,11 +17,11 @@ $color-gray-text-form: #8A898E;
 // Gradient colors 
 $gradient-card-full: rgba(29, 28, 37, 1);
 $gradient-card-opaque: rgba(29, 28, 37, 0);
-$gradient-ellipse-orange: rgba(255, 135, 97, 1);
-$gradient-ellipse-purple: rgba(119, 97, 255, 0);
+$gradient-elipse-orange: rgba(255, 135, 97, 1);
+$gradient-elipse-purple: rgba(119, 97, 255, 0);
 
 // Gradients 
 $education-card-gradient: linear-gradient(to bottom, $gradient-card-full, $gradient-card-opaque);
-$ellipse-gradient: radial-gradient($gradient-ellipse-orange, $gradient-ellipse-purple); // might need direction 
+$elipse-gradient: linear-gradient($gradient-elipse-orange, $gradient-elipse-purple); // might need direction 
 
 $color-input-border: rgba(255, 255, 255, 0.5)
