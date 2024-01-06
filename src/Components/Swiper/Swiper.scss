@@ -14,6 +14,7 @@
     background: linear-gradient(45deg, $color-purple, $color-orange) !important;
 }
 
+
 .swiper {
     width: 100%;
     border-radius: 10px;
@@ -26,12 +27,11 @@
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
+    background: rgba($color: #000000, $alpha: 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: min-content !important;
 }
 
 
@@ -40,10 +40,16 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 
     @include tablet {
         height: 23rem;
         width: 67vw;
+    }
+
+    @include desktop {
+        height: 25rem;
+        width: 49vw;
     }
 }
 
@@ -62,6 +68,7 @@
 } 
 
 .name {
+    margin-top: 1rem;
 
     @include tablet {
         position: absolute;
@@ -81,8 +88,8 @@
         top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
-        z-index: -1; /* Place it behind the text */
+        bottom: -1px;
+        z-index: -1; 
         background-color: $color-main;
         border: 1px solid $color-main;
         transform: skewX(34deg);
@@ -90,8 +97,21 @@
     }
 
     .name h1 {
-        display: inline-block; /* Allows the transform to be applied correctly */
+        display: inline-block; 
         transform: skewX(-34deg);
-        transform-origin: top right; /* Aligns with the pseudo-element's origin */
+        transform-origin: top right;
     }
 }
+
+.swiper-slide {
+    width: 60%;
+  }
+  
+  .swiper-slide:nth-child(2n) {
+    width: 60%;
+  }
+  
+  .swiper-slide:nth-child(3n) {
+    width: 40%;
+  }
+  

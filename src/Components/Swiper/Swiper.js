@@ -6,6 +6,7 @@ import circleArrowIcon from '../../assets/icons/arrow.svg'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
 
@@ -43,6 +44,11 @@ function Swiperzzz() {
                     <SwiperSlide><img className='image' src={SpaceTourismImage}></img></SwiperSlide>
                     <h1 className='name'>EchoLingo</h1>
                 </Swiper>
+
+                <div className='projects__arrow-group'>
+                        <img className='projects__arrow-icon--tablet' src={circleArrowIcon} onClick={() => swiperRef.current?.slidePrev()}></img>
+                        <img className='projects__arrow-icon--tablet' src={circleArrowIcon} onClick={() => swiperRef.current?.slideNext()}></img>
+                </div>
 
                 <div className='projects__horizontal-line'>
                     <img className='projects__arrow-icon' src={circleArrowIcon} onClick={() => swiperRef.current?.slidePrev()}></img>

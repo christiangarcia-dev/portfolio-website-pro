@@ -18,6 +18,7 @@
 
         @include desktop {
             margin-inline: 7rem;
+            margin-bottom: 0.1rem;
         }
 
         &__header {
@@ -31,6 +32,7 @@
                 font-size: 2.5rem;
                 margin-right: auto;
                 max-width: 17%;
+                margin-left: 2rem;
             }
 
             @include desktop {
@@ -57,6 +59,7 @@
 
             @include desktop {
                 padding-block: 1rem;
+                padding-right: 19%;
             }
         }
     }
@@ -70,8 +73,13 @@
             border: 1px solid $color-border;
             border-radius: 49px 0 0 49px;
             padding: 2rem;
+            padding-bottom: 3.5rem;
             margin-left: 3rem;
             margin-bottom: 3rem;
+        }
+
+        @include desktop {
+            margin-left: 7rem;
         }
     }
 
@@ -136,7 +144,8 @@
         border-top: 1px solid #3C3B47;
         position: relative;
         height: 1px;
-        margin-block: 5rem; 
+        margin-bottom: 5rem; 
+        margin-top: 4rem;
         margin-inline: -2rem;
         display: flex;
         justify-content: center;
@@ -171,17 +180,21 @@
 
             @include tablet {
                 display: block;
-                height: 4rem;
+                height: 3.5rem;
                 cursor: pointer;
             }
 
             &:nth-of-type(1) {
                 transform: scaleX(-1);
             }
+
+            &:nth-of-type(2) {
+                transform: scaleX(1);
+            }
         }
     }
 
-    &__arrow__group  {
+    &__arrow-group  {
         display: none;
 
         @include tablet {
@@ -189,9 +202,11 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            bottom: -13.3rem;
+            align-items: center;
             left: 50%;
+            margin-left: -3rem;
             transform: translateX(-50%);
+            bottom: -5.1rem;
             width: auto;
             z-index: 500;
             gap: 3rem;

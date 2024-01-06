@@ -9,7 +9,7 @@ function Skills() {
             <article className='skills__group-wrapper'>
                 <div className='skills__subgroup-wrapper'>
                     <div className='skills__box skills__box--frontend'>
-                        <h2 className='skills__box__header'>Frontend Development:</h2>
+                        <h2 className='skills__box__header'>Front-End Development:</h2>
                         <ul className='skills__box__list'>
                             <li className='skills__box__list--item'>HTML</li>
                             <li className='skills__box__list--item'>CSS</li>
@@ -20,7 +20,7 @@ function Skills() {
                         </ul>
                     </div>
                     <div className='skills__box skills__box--backend'>
-                        <h2 className='skills__box__header'>Backend Development:</h2>
+                        <h2 className='skills__box__header'>Back-End Development:</h2>
                         <ul className='skills__box__list'>
                             <li className='skills__box__list--item'>Node</li>
                             <li className='skills__box__list--item'>Express</li>

@@ -107,8 +107,12 @@
         justify-content: center;
         align-items: center;
         gap: 3rem;
-        margin-bottom: 23rem;
+        margin-bottom: 22rem;
 
+        @include tablet {
+            margin-bottom: 19rem;
+        }
+        
         @include large {
             display: none;
         }
