@@ -80,6 +80,10 @@
                 font-weight: 400;
                 width: 43%;
             }
+
+            @include desktop-cutoff {
+                font-size: 3.5rem;
+            }
         }
 
         &__socials {
