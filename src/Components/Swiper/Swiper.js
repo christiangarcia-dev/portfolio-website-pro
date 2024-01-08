@@ -16,9 +16,6 @@ import InStockImage from '../../assets/images/projects/instock.png';
 import BrainFlixImage from '../../assets/images/projects/brainflix.png';
 import SpaceTourismImage from '../../assets/images/projects/spacetourism.png';
 
-
-
-
 function Swiperzzz() {
 
     const swiperRef = useRef(null);
