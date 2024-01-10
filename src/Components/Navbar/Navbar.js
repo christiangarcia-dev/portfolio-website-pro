@@ -16,7 +16,9 @@ function Navbar() {
     return (
         <nav className='navbar'>
             <img className='navbar__logo' src={logoOrange} alt="Logo"></img>
-            <img className='navbar__circle-gradient' src={circleGradient}></img>
+            <div className='navbar__circle-gradient--wrapper'>
+                <img className='navbar__circle-gradient' src={circleGradient}></img>
+            </div>
             <section className='navbar__options'>
                 <div className='navbar__options__group'>
                     <button className='navbar__options__group--item'>Home</button>

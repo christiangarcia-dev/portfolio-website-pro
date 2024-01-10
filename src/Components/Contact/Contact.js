@@ -34,11 +34,11 @@ function Contact() {
             <form className='contact__form'>
                 <div className='contact__form__input-group'>
                     <div className='contact__form__input-subgroup'>
-                        <label className='contact__form__label'>Name</label>
+                        <label className='contact__form__label'>First Name</label>
                         <input className='contact__form__input' placeholder='John'></input>
                     </div>
                     <div className='contact__form__input-subgroup'>
-                        <label className='contact__form__label'>Surname</label>
+                        <label className='contact__form__label'>Last Name</label>
                         <input className='contact__form__input' placeholder='Johnson'></input>
                     </div>
                 </div>

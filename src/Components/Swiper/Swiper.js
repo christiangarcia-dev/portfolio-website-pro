@@ -34,14 +34,24 @@ const projectNames = [
 
 const githubUrls = [
     'https://github.com/christiangarcia-dev/brainstation-capstone-client',
-    'https://github.com/username/DataConnect',
-    
+    'https://www.google.com/', // MISSING -- data connect repo
+    'https://github.com/christiangarcia-dev/instock-client',
+    'https://github.com/christiangarcia-dev/christian-garcia-brainflix',
+    'https://github.com/christiangarcia-dev/space-tourism-website-main',
+    'https://github.com/christiangarcia-dev/christian-garcia-bandsite',
+    'https://github.com/christiangarcia-dev/frontend-portfolio',
+    'https://gwu.app.box.com/s/5bb96m1hmuh25wzqt4b4iq3b7jnjxohz'
 ];
 
 const externalUrls = [
     'https://echolingo.co',
     'https://www.figma.com/file/8h5rAfSvFa3Q7XaXfnzMcn/Industry-Project?type=design&node-id=0-1&mode=design&t=JR6P1g9YuTv9XXFI-0',
-
+    'https://www.google.com/', // MISSING -- instock website
+    'https://www.google.com/', // MISSING -- brainflix website
+    'https://spacetourism-christiangarcia.netlify.app/',
+    'https://bandsite-beeskness.netlify.app/',
+    'https://christiangarcia.info/', // old portfolio -- switch to netlify domain 
+    'https://gwu.app.box.com/s/5bb96m1hmuh25wzqt4b4iq3b7jnjxohz/file/1268858757470'
 ];
 
 function Swiperzzz() {
