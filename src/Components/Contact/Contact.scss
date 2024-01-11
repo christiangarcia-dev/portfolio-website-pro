@@ -237,7 +237,7 @@
         padding-bottom: 3rem;
         border-radius: 0 0 49px 49px;
 
-        @include tablet {
+        @include desktop {
             display: none;
         }
 

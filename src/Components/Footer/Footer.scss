@@ -52,6 +52,8 @@
         height: 4rem;
         margin-top: 1.6rem;
         margin-bottom: 3rem;
+        z-index: 2000;
+        cursor: pointer;
 
         @include tablet {
             height: 4.7rem;

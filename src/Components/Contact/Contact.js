@@ -15,18 +15,26 @@ function Contact() {
                 <div className='contact__top__socials'>
                     <div className='contact__top__socials--wrapper'>
                         <div className='contact__top__socials--box'>
-                            <img className='contact__top__socials--icon' src={githubIcon}></img>
+                            <a href='https://github.com/christiangarcia-dev' target='_blank' rel='noopener noreferrer' className='contact__bottom__socials--box'>
+                                <img className='contact__top__socials--icon' src={githubIcon}></img>
+                            </a>
                         </div>
                         <div className='contact__top__socials--box'>
-                            <img className='contact__top__socials--icon' src={mediumIcon}></img>
+                            <a href='https://medium.com/@2001christiangarcia/my-software-engineering-journey-32ac253c2a4a' target='_blank' rel='noopener noreferrer' className='contact__bottom__socials--box'>
+                                <img className='contact__top__socials--icon' src={mediumIcon}></img>
+                            </a>
                         </div>
                     </div>
                     <div className='contact__top__socials--wrapper'>
                         <div className='contact__top__socials--box'>
-                            <img className='contact__top__socials--icon' src={linkedinIcon}></img>
+                            <a href='https://www.linkedin.com/in/christiangarciadiaz/' target='_blank' rel='noopener noreferrer' className='contact__bottom__socials--box'>
+                                <img className='contact__top__socials--icon' src={linkedinIcon}></img>
+                            </a>
                         </div>
                         <div className='contact__top__socials--box'>
-                            <img className='contact__top__socials--icon' src={mailIcon}></img>
+                            <a href='mailto:2001christiangarcia@gmail.com' className='contact__bottom__socials--box'>
+                                <img className='contact__top__socials--icon' src={mailIcon}></img>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +61,7 @@ function Contact() {
                     </div>
                 </div>
 
-                <label className='contact__form__label'>About Project</label>
+                <label className='contact__form__label'>Message</label>
                 <textarea className='contact__form__input contact__form__input--textarea' placeholder='Type here...'></textarea>
 
                 <button className='contact__form__submit' type='submit'>Contact Me</button>
