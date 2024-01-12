@@ -70,15 +70,29 @@
                 font-size: 0.9rem;
                 font-weight: 500;
                 cursor: pointer;
+                position: relative;
+                display: inline-block; 
+                padding-bottom: 4px;
+                margin-bottom: -5px;
 
                 @include tablet {
 
-                    &:hover {
-                        text-decoration: underline;
-                        text-decoration-color: $color-orange;
-                        text-decoration-thickness: 3px;
-                        // add padding between text and underline 
-                        // add animation for underline from left to right
+                    &:after {
+                        content: '';
+                        display: block;
+                        margin-top: 5px; 
+                        height: 3px; 
+                        width: 0;
+                        background: $color-orange;
+                        transition: width 0.3s ease-in-out;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        cursor: pointer;
+                    }
+            
+                    &:hover:after {
+                        width: 100%;
                     }
                 }
             }
@@ -102,7 +116,7 @@
                 &:hover {
                     background-color: $color-white;
                     color: $color-gray-button;
-                    box-shadow: inset 6.5em 0 0 0 var(--hover);
+                    transition: background-color 0.3s, color 0.3s;
                 }
             }
 
