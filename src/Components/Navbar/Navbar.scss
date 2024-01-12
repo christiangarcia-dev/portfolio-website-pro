@@ -70,10 +70,24 @@
                 font-size: 0.9rem;
                 font-weight: 500;
                 cursor: pointer;
+
+                @include tablet {
+
+                    &:hover {
+                        text-decoration: underline;
+                        text-decoration-color: $color-orange;
+                        text-decoration-thickness: 3px;
+                        // add padding between text and underline 
+                        // add animation for underline from left to right
+                    }
+                }
             }
         }
 
         &__contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: $color-gray-button;
             border: none;
             border-radius: 5px;
@@ -83,6 +97,13 @@
             height: 2.7rem;
             margin-left: auto;
             cursor: pointer;
+
+            @include tablet {
+                &:hover {
+                    background-color: $color-white;
+                    color: $color-gray-button;
+                }
+            }
 
             @include desktop {
                 padding-inline: 2.1rem;

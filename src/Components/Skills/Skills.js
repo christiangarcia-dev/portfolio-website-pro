@@ -4,7 +4,7 @@ import tronLinesImage from '../../assets/images/frontend-illustration.svg'
 function Skills() {
 
     return (
-        <section className='skills'>
+        <section className='skills' id='skills'>
             <h1 className='skills__header'>My Skills</h1>
             <article className='skills__group-wrapper'>
                 <div className='skills__subgroup-wrapper'>

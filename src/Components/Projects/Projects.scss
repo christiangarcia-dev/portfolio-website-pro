@@ -83,7 +83,8 @@
         }
 
         @include desktop-cutoff {
-            width: 100vw;
+            // width: 100vw;
+            margin-right: -9.5rem;
         }
     }
 

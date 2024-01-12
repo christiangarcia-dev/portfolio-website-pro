@@ -1,11 +1,12 @@
 import './Footer.scss'
+import React from 'react';
 import logoWhite from '../../assets/logo/logo-white.svg'
 import circleGradient from '../../assets/images/gradient-circle.svg'
 
 function Footer() {
 
     return (
-        <footer className='footer'>
+        <footer className='footer' id='footer'>
             <img className='footer__circle-gradient' src={circleGradient}></img>
             <div className='footer__circle-gradient--2-wrapper'>
                 <img className='footer__circle-gradient--2' src={circleGradient}></img>
@@ -15,6 +16,6 @@ function Footer() {
             <h1 className='footer__copyright'>© 2024 Christian Garcia . All rights reserved.</h1>
         </footer>
     )
-}
+};
 
 export default Footer;

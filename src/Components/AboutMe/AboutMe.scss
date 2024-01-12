@@ -187,6 +187,16 @@
             @include desktop {
                 width: 60%;
             }
+
+            &--medium {
+                font-weight: 600;
+                color: $color-gray-text-form;
+                text-decoration: none;
+
+                &:hover {
+                    color: $color-orange;
+                }
+            }
         }
 
         &__resume {

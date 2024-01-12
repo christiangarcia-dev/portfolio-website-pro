@@ -8,7 +8,7 @@ import mailIcon from '../../assets/icons/mail.svg'
 function Contact() {
 
     return (
-        <section className='contact'>
+        <section className='contact' id='contact'>
             <img className='contact__moon' src={moonImage}></img>
             <div className='contact__top'>
                 <h1 className='contact__top__header'>Feel Free to Get in Touch with me</h1>
