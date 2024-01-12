@@ -102,6 +102,7 @@
                 &:hover {
                     background-color: $color-white;
                     color: $color-gray-button;
+                    box-shadow: inset 6.5em 0 0 0 var(--hover);
                 }
             }
 
