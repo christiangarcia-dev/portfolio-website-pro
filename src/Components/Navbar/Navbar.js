@@ -14,9 +14,13 @@ function Navbar() {
         setIsNavModalOpen(!isNavModalOpen);
     };
 
+    const reloadPage = () => {
+        window.location.href = window.location.origin; 
+    };
+
     return (
         <nav className='navbar' id='navbar'>
-            <img className='navbar__logo' src={logoOrange} alt="Logo"></img>
+            <img className='navbar__logo' src={logoOrange} alt="Logo" onClick={reloadPage}></img>
             <div className='navbar__circle-gradient--wrapper'>
                 <img className='navbar__circle-gradient' src={circleGradient}></img>
             </div>
