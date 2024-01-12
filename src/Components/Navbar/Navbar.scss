@@ -3,7 +3,7 @@
 
 .navbar {
     display: flex;
-    position: relative;
+    
     margin-top: 2rem;
     align-items: center;
 
@@ -31,21 +31,42 @@
         }
     }
 
-    &__circle-gradient {
-        display: block;
-        position: absolute;
-        z-index: -1;
-        height: 170vw;
+    &__circle-gradient--wrapper {
+        position: absolute; 
         right: 0;
         top: 0;
+        width: 170vw; 
+        height: 170vw; 
+        overflow: hidden;
+        z-index: -1;
+
+        @include large {
+            height: 140vw;
+            width: 140vw;
+        }
+
+        @include desktop {
+            height: 120vw;
+            width: 120vw;
+        }
+    }
+
+    &__circle-gradient {
+        position: absolute;
+        height: 170vw;
+        width: 170vw;
+        left: 0%;
+        top: 0%;
         transform: translate(50%, -50%);
 
         @include large {
             height: 140vw;
+            width: 140vw;
         }
 
         @include desktop {
-            height: 100vw;
+            height: 120vw;
+            width: 120vw;
         }
     }
 
