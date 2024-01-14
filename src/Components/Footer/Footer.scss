@@ -9,18 +9,6 @@
     position: relative;
 
     &__circle-gradient {
-        position: absolute;
-        z-index: -1;
-        height: 115vw;
-        top: -3rem;
-        right: 50%;
-        transform: translate(50%, -50%);
-
-        @include tablet {
-            right: 20%;
-            top: -6rem;
-            height: 60vw;
-        }
 
         &--2 {
             display: none;
@@ -28,7 +16,7 @@
             @include tablet {
                 display: flex;
                 position: absolute;
-                height: 85vw;
+                height: 105vw;
                 z-index: -1;
                 left: 0;
                 bottom: 0;
@@ -36,15 +24,17 @@
             }
         }
     }
+
     &__circle-gradient--2-wrapper {
+
         @include tablet {
             overflow: hidden;
             position: absolute;
-            left: 40%;
+            left: 45%;
             bottom: 0;
-            height: 42.5vw; /* Half of your image height */
+            height: 52.5vw; 
             transform: translateX(-50%);
-            width: 85vw; /* Full width of your image */
+            width: 105vw; 
         }
     }
 
@@ -68,6 +58,7 @@
         color: $color-gray-text;
         width: 77%;
         margin-bottom: 3rem;
+        z-index: 100;
 
         @include tablet {
             width: 47%;

@@ -16,10 +16,12 @@
 
     @include tablet {
         margin-inline: 3rem;
+        margin-bottom: 7rem;
         border-radius: 49px;
     }
 
     @include desktop {
+        margin-bottom: 5rem;
         margin-inline: 7rem;
     }
 
@@ -71,7 +73,7 @@
 
             @include tablet {
                 font-size: 3rem;
-                width: 40%;
+                width: 45%;
                 padding-block: 2.5rem;
             }
 
@@ -126,7 +128,7 @@
         display: flex;
         flex-direction: column;
 
-        @include tablet {
+        @include desktop {
             border-radius: 0 0 49px 49px;
         }
 
@@ -234,14 +236,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 1rem;
+        padding-top: 1rem;
         margin-bottom: 2rem;
         padding-bottom: 3rem;
-        border-radius: 0 0 49px 49px;
+        border-radius: 0 0 33px 33px;
 
         @include tablet {
             justify-content: center;
             gap: 3rem;
+            border-radius: 0 0 49px 49px;
         }
 
         @include desktop {
@@ -262,6 +265,52 @@
             height: 15vw;
             max-height: 4.7rem;
             padding: 1rem;
+        }
+    }
+
+    &__circle-gradient {
+        position: absolute;
+        z-index: -3;
+        height: 100vw;
+        // width: 100vw;
+        left: 0;
+        bottom: -12rem;
+
+        @include tablet {
+            bottom: 0;
+            left: 0;
+            height: 60vw;
+        }
+
+        @include desktop-cutoff {
+            height: 45vw;
+            width: 45vw;
+        }
+    }
+
+    &__circle-gradient--wrapper {
+        width: 100vw;
+
+        @include tablet {
+            overflow: hidden;
+            position: absolute;
+            background-color: transparent;
+            height: 100%;
+            width: 60vw;
+            bottom: -18rem;
+            right: -3rem;
+            z-index: -2;
+        }
+
+        @include desktop {
+            right: -7rem;
+        }
+
+        @include desktop-cutoff {
+            right: -16.5rem;
+            bottom: -10rem;
+            height: 150%;
+            width: 22.5vw;
         }
     }
 

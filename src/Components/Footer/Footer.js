@@ -11,7 +11,6 @@ function Footer() {
 
     return (
         <footer className='footer' id='footer'>
-            <img className='footer__circle-gradient' src={circleGradient}></img>
             <div className='footer__circle-gradient--2-wrapper'>
                 <img className='footer__circle-gradient--2' src={circleGradient}></img>
             </div>

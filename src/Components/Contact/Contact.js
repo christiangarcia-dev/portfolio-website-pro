@@ -4,6 +4,7 @@ import githubIcon from '../../assets/icons/github.svg'
 import mediumIcon from '../../assets/icons/medium.svg'
 import linkedinIcon from '../../assets/icons/linkedin.svg'
 import mailIcon from '../../assets/icons/mail.svg'
+import circleGradient from '../../assets/images/gradient-circle.svg'
 
 function Contact() {
 
@@ -79,6 +80,9 @@ function Contact() {
                 <a href='mailto:2001christiangarcia@gmail.com' className='contact__bottom__socials--box'>
                     <img className='contact__bottom__socials--icon' src={mailIcon} alt='Email'></img>
                 </a>
+            </div>
+            <div className='contact__circle-gradient--wrapper'>
+                <img className='contact__circle-gradient' src={circleGradient}></img>
             </div>
         </section>
     )

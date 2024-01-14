@@ -109,8 +109,10 @@ function Swiperzzz() {
                 </div>
 
                 <div className='projects__horizontal-line'>
-                    <img className='projects__arrow-icon' src={circleArrowIcon} onClick={() => swiperRef.current?.slidePrev()}></img>
-                    <img className='projects__arrow-icon' src={circleArrowIcon} onClick={() => swiperRef.current?.slideNext()}></img>
+                    <div className='projects__arrows__flex-container'>
+                        <img className='projects__arrow-icon' src={circleArrowIcon} onClick={() => swiperRef.current?.slidePrev()}></img>
+                        <img className='projects__arrow-icon' src={circleArrowIcon} onClick={() => swiperRef.current?.slideNext()}></img>
+                    </div>
                 </div>
             </div>
         </>
