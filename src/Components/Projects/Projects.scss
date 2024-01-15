@@ -226,5 +226,13 @@
             gap: 3rem;
             z-index: 1000;
         }
+
+        @include desktop {
+            transform: translateX(-60%);
+        }
+
+        @include desktop-cutoff {
+            transform: translateX(-100%);
+        }
     }
 }
