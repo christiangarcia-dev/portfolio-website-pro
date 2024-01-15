@@ -77,6 +77,13 @@ function Swiperzzz() {
         }
     };
 
+    const getLinkStyle = (url) => {
+        if (!url || url === 'https://www.google.com/') { // Assuming 'https://www.google.com/' is your placeholder for missing links
+            return { opacity: 0.5, pointerEvents: 'none' }; // Adjust styling as needed (e.g., opacity, pointerEvents)
+        }
+        return {}; // Return empty style for available links
+    };
+
     return (
         <>
             <div className="custom-swiper-container">
@@ -99,7 +106,10 @@ function Swiperzzz() {
                     <SwiperSlide><img className='image' src={BeesKneesImage}></img></SwiperSlide>
                     <SwiperSlide><img className='image' src={FirstPortfolioImage}></img></SwiperSlide>
                     <SwiperSlide><img className='image' src={MindstillImage}></img></SwiperSlide>
-                    <h1 className='name'>{projectNames[currentIndex]}<img className='github' src={githubSquareIcon} onClick={handleGitHubClick} alt='project github link'></img><img className='external-link' src={externalLinkIcon} onClick={handleExternalLinkClick} alt='link to project'></img></h1>
+                    <h1 className='name'>{projectNames[currentIndex]}
+                        <img className='github' src={githubSquareIcon} onClick={handleGitHubClick} alt='project github link'></img>
+                        <img className='external-link' src={externalLinkIcon} onClick={handleExternalLinkClick} alt='link to project' style={getLinkStyle(externalUrls[currentIndex])}></img>
+                    </h1>
                 </Swiper>
 
                 
