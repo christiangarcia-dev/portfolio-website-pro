@@ -15,7 +15,7 @@ function Footer() {
                 <img className='footer__circle-gradient--2' src={circleGradient}></img>
             </div>
             <img className='footer__logo' src={logoWhite} onClick={reloadPage}></img>
-            <p className='footer__closer'>Lover of life’s healthier aspects, I’m into fitness, learning about wellness and psychology, and I enjoy spending my time outside. When I can I rejoice in diving into a good book or listening to thought provoking podcasts.</p>
+            <p className='footer__closer'>Commited to learning and enhancing this craft. Currently, diving deeper into the wonderful library of React.js, learning React Native, and pursuing an AWS Cloud Practicioner certification. Thank you for visiting! </p>
             <h1 className='footer__copyright'>© 2024 Christian Garcia . All rights reserved.</h1>
         </footer>
     )
