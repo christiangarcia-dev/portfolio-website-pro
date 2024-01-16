@@ -62,15 +62,33 @@
         }
 
         &--frontend {
-            background-color: $color-orange;
+            // background-image: linear-gradient(
+            //     180deg,
+            //     hsl(7deg 95% 58%) 1%,
+            //     hsl(7deg 91% 65%) 50%,
+            //     hsl(7deg 80% 71%) 99%
+            // );
+            background: $color-orange;
         }
 
         &--backend {
-            background-color: $color-gray-card;
+            background-image: linear-gradient(
+                180deg,
+                hsl(247deg 14% 13%) 1%,
+                hsl(249deg 3% 37%) 50%,
+                hsl(0deg 0% 64%) 99%
+            );
+            background: $color-gray-card;
         }
 
         &--design {
-            background-color: $color-purple;
+            background-image: linear-gradient(
+                180deg,
+                hsl(248deg 100% 69%) 1%,
+                hsl(249deg 100% 75%) 50%,
+                hsl(248deg 100% 82%) 99%
+            );
+            background: $color-purple;
             
             @include tablet {
                 padding-bottom: 0;

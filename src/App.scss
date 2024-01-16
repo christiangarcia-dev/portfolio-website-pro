@@ -11,5 +11,18 @@
 body {
     max-width: 100%;
     overflow-x: hidden;
-    // text-wrap: balance;
+
+    @include ultrawide {
+        width: 1600px;
+        margin-inline: auto;
+    }
+}
+
+.navbar__circle-gradient, .navbar__circle-gradient--wrapper, .contact__circle-gradient, .footer__circle-gradient--2, .footer__circle-gradient--2--wrapper {
+
+    @include ultrawide {
+        display: none;
+        width: 0;
+        height: 0;
+    }
 }

@@ -46,8 +46,8 @@ const githubUrls = [
 const externalUrls = [
     'https://echolingo.co',
     'https://www.figma.com/file/8h5rAfSvFa3Q7XaXfnzMcn/Industry-Project?type=design&node-id=0-1&mode=design&t=JR6P1g9YuTv9XXFI-0',
-    'https://www.google.com/', // MISSING -- instock website
-    'https://www.google.com/', // MISSING -- brainflix website
+    'https://www.google.com/',
+    'https://www.google.com/',
     'https://spacetourism-christiangarcia.netlify.app/',
     'https://bandsite-beeskness.netlify.app/',
     'https://christiangarcia.info/', // old portfolio -- switch to netlify domain 
@@ -78,10 +78,10 @@ function Swiperzzz() {
     };
 
     const getLinkStyle = (url) => {
-        if (!url || url === 'https://www.google.com/') { // Assuming 'https://www.google.com/' is your placeholder for missing links
-            return { opacity: 0.5, pointerEvents: 'none' }; // Adjust styling as needed (e.g., opacity, pointerEvents)
+        if (!url || url === 'https://www.google.com/') { 
+            return { opacity: 0.5, pointerEvents: 'none' };
         }
-        return {}; // Return empty style for available links
+        return {}; 
     };
 
     return (

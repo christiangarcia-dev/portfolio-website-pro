@@ -89,63 +89,6 @@
         }
     }
 
-
-
-    // old swiper:
-
-    &__swiper {
-        overflow: hidden;
-        position: relative;
-        margin-top: 2rem;
-        margin-inline: 2rem;
-        border-radius: 10px;
-        
-        @include tablet {
-            border: 1px solid $color-border;
-            padding: 2rem;
-            margin-left: 3rem;
-            margin-right: 0;
-            margin-top: 0;
-            margin-bottom: 4rem;
-            border-radius: 49px 0 0 49px;
-            padding: 2rem 3rem;
-        }
-
-        @include desktop {
-            margin-left: 7rem;
-        }
-
-        &__container {
-            display: flex;
-            transition: transform 0.3s ease;
-            border-radius: 10px;
-            gap: 2rem;
-        }
-
-        &__item {
-            position: relative;
-            flex: 0 0 100%; 
-            width: 100%;
-            max-width: 31.8125rem; 
-            display: block; 
-            border-radius: 10px;
-
-            @include tablet {
-                margin-right: 1.5rem;
-                width: 70%;
-                max-width: 30rem;
-            }
-        }
-
-        &__name-container {
-            margin-top: 2rem; 
-        }
-
-        &__project-name {
-            font-size: 1.3rem;
-        }
-    }
-
     &__horizontal-line {
         border-top: 1px solid #3C3B47;
         position: relative;
@@ -165,17 +108,11 @@
     &__arrow-icon {
         height: 4rem;
         z-index: 10;
-        // top: 50%;
         margin-top: -3px;
         cursor: pointer;
 
         &:nth-of-type(1) {
-            // left: 35%;
             transform: scaleX(-1);
-        }
-
-        &:nth-of-type(2) {
-            // left: 65%;
         }
 
         &--tablet {
