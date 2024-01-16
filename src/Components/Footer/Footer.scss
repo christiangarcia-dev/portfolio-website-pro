@@ -59,6 +59,7 @@
         width: 77%;
         margin-bottom: 3rem;
         z-index: 100;
+        text-wrap: balance;
 
         @include tablet {
             width: 47%;
