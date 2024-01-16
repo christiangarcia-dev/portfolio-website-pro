@@ -8,6 +8,49 @@ import circleGradient from '../../assets/images/gradient-circle.svg'
 
 function Contact() {
 
+    const [form, setForm] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: ''
+    });
+    const [errors, setErrors] = useState({});
+
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    const validateForm = () => {
+        let valid = true;
+        let errors = {};
+
+        if (!form.firstName.trim()) {
+            errors.firstName = 'First name is required';
+            valid = false;
+        }
+
+        if (!form.lastName.trim()) {
+            errors.lastName = 'Last name is required';
+            valid = false;
+        }
+
+        if (!form.message.trim()) {
+            errors.message = 'Message is required';
+            valid = false;
+        }
+
+        setErrors(errors);
+        return valid;
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (validateForm()) {
+            console.log('Form submitted:', form);
+        }
+    };
+
     return (
         <section className='contact' id='contact'>
             <img className='contact__moon' src={moonImage}></img>
@@ -40,11 +83,12 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <form className='contact__form'>
+            <form className='contact__form' onSubmit={handleSubmit}>
                 <div className='contact__form__input-group'>
                     <div className='contact__form__input-subgroup'>
                         <label className='contact__form__label'>First Name</label>
-                        <input className='contact__form__input' placeholder='John'></input>
+                        <input className='contact__form__input' placeholder='John' name='firstName' onChange={handleChange} value={form.firstName}></input>
+                        {errors.firstName && <p className="error">{errors.firstName}</p>}
                     </div>
                     <div className='contact__form__input-subgroup'>
                         <label className='contact__form__label'>Last Name</label>
