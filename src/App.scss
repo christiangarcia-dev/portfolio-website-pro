@@ -1,6 +1,10 @@
 @use './styles/partials/variables' as *;
 @use './styles/partials/mixins' as *;
 
+html {
+    font-size: 14px;
+}
+
 .App {
     @include desktop-cutoff {
         margin-inline: 9.5rem;
