@@ -42,7 +42,6 @@ function Carousel() {
                 {logos.map((logo, index) => (
                     <img key={index} src={logo} alt={`Logo ${index + 1}`} />
                 ))}
-                {/* Duplicate the logos for the infinite effect */}
                 {logos.map((logo, index) => (
                     <img key={`duplicate-${index}`} src={logo} alt={`Logo ${index + 1}`} />
                 ))}

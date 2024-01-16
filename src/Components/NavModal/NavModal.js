@@ -6,7 +6,7 @@ function NavModal({closeNavModal}) {
 
     return (
         <section className='nav-modal'>
-            <img className='nav-modal__close' src={closeIcon} alt="Close" onClick={closeNavModal}></img>
+            <img className='nav-modal__close' src={closeIcon} alt="close nav modal" onClick={closeNavModal}></img>
             <ul className='nav-modal__list'>
                 <Link className='nav-modal__list__item' to='navbar' smooth={true} spy={true} offset={-10} duration={600} onClick={closeNavModal}>Home</Link>
                 <Link className='nav-modal__list__item' to='about' smooth={true} spy={true} offset={-100} duration={600} onClick={closeNavModal}>About Me</Link>

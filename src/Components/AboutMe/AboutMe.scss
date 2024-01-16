@@ -246,6 +246,10 @@
                 @include tablet {
                     height: 0.85rem;
                 }
+
+                @include desktop-cutoff {
+                    height: 1rem;
+                }
             }
         }
     }

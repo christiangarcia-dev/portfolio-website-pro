@@ -6,7 +6,6 @@ import AboutMe from "../../Components/AboutMe/AboutMe";
 import Education from "../../Components/Education/Education";
 import Contact from "../../Components/Contact/Contact";
 import Footer from "../../Components/Footer/Footer";
-import Carousel from "../../Components/Carousel/Carousel";
 
 function HomePage() {
 

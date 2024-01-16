@@ -98,30 +98,30 @@ function Swiperzzz() {
                     className="mySwiper"
                     onSlideChange={handleSlideChange}
                     onSwiper={(swiper) => swiperRef.current = swiper}>
-                    <SwiperSlide><img className='image' src={EchoLingoImage}></img></SwiperSlide>
-                    <SwiperSlide><img className='image' src={DataConnectImage}></img></SwiperSlide>
-                    <SwiperSlide><img className='image' src={InStockImage}></img></SwiperSlide>
-                    <SwiperSlide><img className='image' src={BrainFlixImage}></img></SwiperSlide>
-                    <SwiperSlide><img className='image' src={SpaceTourismImage}></img></SwiperSlide>
-                    <SwiperSlide><img className='image' src={BeesKneesImage}></img></SwiperSlide>
-                    <SwiperSlide><img className='image' src={FirstPortfolioImage}></img></SwiperSlide>
-                    <SwiperSlide><img className='image' src={MindstillImage}></img></SwiperSlide>
+                    <SwiperSlide><img className='image' src={EchoLingoImage} alt='project image'></img></SwiperSlide>
+                    <SwiperSlide><img className='image' src={DataConnectImage} alt='project image'></img></SwiperSlide>
+                    <SwiperSlide><img className='image' src={InStockImage} alt='project image'></img></SwiperSlide>
+                    <SwiperSlide><img className='image' src={BrainFlixImage} alt='project image'></img></SwiperSlide>
+                    <SwiperSlide><img className='image' src={SpaceTourismImage} alt='project image'></img></SwiperSlide>
+                    <SwiperSlide><img className='image' src={BeesKneesImage} alt='project image'></img></SwiperSlide>
+                    <SwiperSlide><img className='image' src={FirstPortfolioImage} alt='project image'></img></SwiperSlide>
+                    <SwiperSlide><img className='image' src={MindstillImage} alt='project image'></img></SwiperSlide>
                     <h1 className='name'>{projectNames[currentIndex]}
-                        <img className='github' src={githubSquareIcon} onClick={handleGitHubClick} alt='project github link'></img>
+                        <img className='github' src={githubSquareIcon} onClick={handleGitHubClick} alt='link to github repo'></img>
                         <img className='external-link' src={externalLinkIcon} onClick={handleExternalLinkClick} alt='link to project' style={getLinkStyle(externalUrls[currentIndex])}></img>
                     </h1>
                 </Swiper>
 
                 
                 <div className='projects__arrow-group'>
-                        <img className='projects__arrow-icon--tablet' src={circleArrowIcon} onClick={() => swiperRef.current?.slidePrev()}></img>
-                        <img className='projects__arrow-icon--tablet' src={circleArrowIcon} onClick={() => swiperRef.current?.slideNext()}></img>
+                        <img className='projects__arrow-icon--tablet' src={circleArrowIcon} onClick={() => swiperRef.current?.slidePrev()} alt='swiper previous'></img>
+                        <img className='projects__arrow-icon--tablet' src={circleArrowIcon} onClick={() => swiperRef.current?.slideNext()} alt='swiper next'></img>
                 </div>
 
                 <div className='projects__horizontal-line'>
                     <div className='projects__arrows__flex-container'>
-                        <img className='projects__arrow-icon' src={circleArrowIcon} onClick={() => swiperRef.current?.slidePrev()}></img>
-                        <img className='projects__arrow-icon' src={circleArrowIcon} onClick={() => swiperRef.current?.slideNext()}></img>
+                        <img className='projects__arrow-icon' src={circleArrowIcon} onClick={() => swiperRef.current?.slidePrev()} alt='swiper previous'></img>
+                        <img className='projects__arrow-icon' src={circleArrowIcon} onClick={() => swiperRef.current?.slideNext()} alt='swiper next'></img>
                     </div>
                 </div>
             </div>

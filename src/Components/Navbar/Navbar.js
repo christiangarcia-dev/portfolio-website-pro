@@ -22,7 +22,7 @@ function Navbar() {
         <nav className='navbar' id='navbar'>
             <img className='navbar__logo' src={logoOrange} alt="Logo" onClick={reloadPage}></img>
             <div className='navbar__circle-gradient--wrapper'>
-                <img className='navbar__circle-gradient' src={circleGradient}></img>
+                <img className='navbar__circle-gradient' src={circleGradient} alt='decorative circular gradient'></img>
             </div>
             <section className='navbar__options'>
                 <div className='navbar__options__group'>
@@ -34,7 +34,6 @@ function Navbar() {
                 <Link className='navbar__options__contact' to='contact' smooth={true} spy={true} offset={-50} duration={600}>Contact Me</Link>
             </section>
             <img className='navbar__burger-menu' src={hamburgerMenu} alt="Menu" onClick={toggleNavModal}></img>
-
             {isNavModalOpen && <NavModal closeNavModal={toggleNavModal} />}
         </nav>
     )

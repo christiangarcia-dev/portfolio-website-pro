@@ -65,24 +65,24 @@ function Contact() {
                     <div className='contact__top__socials--wrapper'>
                         <div className='contact__top__socials--box'>
                             <a href='https://github.com/christiangarcia-dev' target='_blank' rel='noopener noreferrer' className='contact__bottom__socials--box'>
-                                <img className='contact__top__socials--icon' src={githubIcon}></img>
+                                <img className='contact__top__socials--icon' src={githubIcon} alt='github icon'></img>
                             </a>
                         </div>
                         <div className='contact__top__socials--box'>
                             <a href='https://medium.com/@2001christiangarcia/my-software-engineering-journey-32ac253c2a4a' target='_blank' rel='noopener noreferrer' className='contact__bottom__socials--box'>
-                                <img className='contact__top__socials--icon' src={mediumIcon}></img>
+                                <img className='contact__top__socials--icon' src={mediumIcon} alt='medium icon'></img>
                             </a>
                         </div>
                     </div>
                     <div className='contact__top__socials--wrapper'>
                         <div className='contact__top__socials--box'>
                             <a href='https://www.linkedin.com/in/christiangarciadiaz/' target='_blank' rel='noopener noreferrer' className='contact__bottom__socials--box'>
-                                <img className='contact__top__socials--icon' src={linkedinIcon}></img>
+                                <img className='contact__top__socials--icon' src={linkedinIcon} alt='linkedin icon'></img>
                             </a>
                         </div>
                         <div className='contact__top__socials--box'>
                             <a href='mailto:2001christiangarcia@gmail.com' className='contact__bottom__socials--box'>
-                                <img className='contact__top__socials--icon' src={mailIcon}></img>
+                                <img className='contact__top__socials--icon' src={mailIcon} alt='email icon'></img>
                             </a>
                         </div>
                     </div>
@@ -130,7 +130,7 @@ function Contact() {
                 </a>
             </div>
             <div className='contact__circle-gradient--wrapper'>
-                <img className='contact__circle-gradient' src={circleGradient}></img>
+                <img className='contact__circle-gradient' src={circleGradient} alt='decorative circular gradient'></img>
             </div>
         </section>
     )

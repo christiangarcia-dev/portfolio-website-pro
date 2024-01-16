@@ -46,7 +46,7 @@ function Skills() {
                         <li className='skills__box__list--item'>Blender</li>
                         <li className='skills__box__list--item'>TouchDesigner</li>
                     </ul>
-                    <img className='skills__box--design-image' src={tronLinesImage}></img>
+                    <img className='skills__box--design-image' src={tronLinesImage} alt='decorative coding lines'></img>
                 </div>
             </article>
         </section>

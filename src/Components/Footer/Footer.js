@@ -12,9 +12,9 @@ function Footer() {
     return (
         <footer className='footer' id='footer'>
             <div className='footer__circle-gradient--2-wrapper'>
-                <img className='footer__circle-gradient--2' src={circleGradient}></img>
+                <img className='footer__circle-gradient--2' src={circleGradient} alt='decorative circular gradient'></img>
             </div>
-            <img className='footer__logo' src={logoWhite} onClick={reloadPage}></img>
+            <img className='footer__logo' src={logoWhite} onClick={reloadPage} alt='white owner logo'></img>
             <p className='footer__closer'>Commited to learning and enhancing this craft. Currently, diving deeper into the wonderful library of React.js, learning React Native, and pursuing an AWS Cloud Practicioner certification. Thank you for visiting! </p>
             <h1 className='footer__copyright'>© 2024 Christian Garcia . All rights reserved.</h1>
         </footer>

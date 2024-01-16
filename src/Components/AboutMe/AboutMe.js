@@ -8,10 +8,10 @@ function AboutMe() {
 
     return (
         <section className='about' id='about'>
-            <img className='about__circle-gradient' src={circleGradient}></img>
-            <img className='about__elipse-gradient--1' src={elipseGradient}></img>
-            <img className='about__elipse-gradient--2' src={elipseGradient}></img>
-            <img className='about__elipse-gradient--3' src={elipseGradient}></img>
+            <img className='about__circle-gradient' src={circleGradient} alt='decorative circular gradient'></img>
+            <img className='about__elipse-gradient--1' src={elipseGradient} alt='decorative circular gradient'></img>
+            <img className='about__elipse-gradient--2' src={elipseGradient} alt='decorative circular gradient'></img>
+            <img className='about__elipse-gradient--3' src={elipseGradient} alt='decorative circular gradient'></img>
             <div className='about__outer-circle'>
                 <div className='about__inner-circle'>
                     <div className='about__headshot-wrapper'>
