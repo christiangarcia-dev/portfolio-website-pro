@@ -9,6 +9,7 @@ import nodeIcon from '../../assets/carousel/node.svg'
 import reactIcon from '../../assets/carousel/react.svg'
 import sassIcon from '../../assets/carousel/sass.svg'
 import expressIcon from '../../assets/carousel/express.svg'
+import npmIcon from '../../assets/carousel/npm.svg'
 
 function Carousel() {
 
@@ -23,6 +24,7 @@ function Carousel() {
         reactIcon,
         sassIcon,
         expressIcon,
+        npmIcon,
 
         bootstrapIcon,
         cssIcon,
@@ -33,7 +35,8 @@ function Carousel() {
         nodeIcon,
         reactIcon,
         sassIcon,
-        expressIcon
+        expressIcon,
+        npmIcon
     ];
 
     return (
