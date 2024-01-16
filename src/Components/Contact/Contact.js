@@ -1,4 +1,5 @@
 import './Contact.scss'
+import { useState } from 'react'
 import moonImage from '../../assets/images/moon.png'
 import githubIcon from '../../assets/icons/github.svg'
 import mediumIcon from '../../assets/icons/medium.svg'
@@ -27,16 +28,19 @@ function Contact() {
 
         if (!form.firstName.trim()) {
             errors.firstName = 'First name is required';
+            alert('First name is required');
             valid = false;
         }
 
         if (!form.lastName.trim()) {
             errors.lastName = 'Last name is required';
+            alert('Last name is required');
             valid = false;
         }
 
         if (!form.message.trim()) {
             errors.message = 'Message is required';
+            alert('Message field is required');
             valid = false;
         }
 
@@ -48,6 +52,7 @@ function Contact() {
         e.preventDefault();
         if (validateForm()) {
             console.log('Form submitted:', form);
+            alert('Thank you for your message!');
         }
     };
 
@@ -88,7 +93,6 @@ function Contact() {
                     <div className='contact__form__input-subgroup'>
                         <label className='contact__form__label'>First Name</label>
                         <input className='contact__form__input' placeholder='John' name='firstName' onChange={handleChange} value={form.firstName}></input>
-                        {errors.firstName && <p className="error">{errors.firstName}</p>}
                     </div>
                     <div className='contact__form__input-subgroup'>
                         <label className='contact__form__label'>Last Name</label>

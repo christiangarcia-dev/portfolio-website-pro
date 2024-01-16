@@ -50,7 +50,7 @@ const externalUrls = [
     'https://www.google.com/',
     'https://spacetourism-christiangarcia.netlify.app/',
     'https://bandsite-beeskness.netlify.app/',
-    'https://christiangarcia.info/', // old portfolio -- switch to netlify domain 
+    'https://christiangarcia-oldportfolio.netlify.app/', 
     'https://gwu.app.box.com/s/5bb96m1hmuh25wzqt4b4iq3b7jnjxohz/file/1268858757470'
 ];
 

@@ -22,6 +22,17 @@ function Carousel() {
         nodeIcon,
         reactIcon,
         sassIcon,
+        expressIcon,
+
+        bootstrapIcon,
+        cssIcon,
+        figmaIcon,
+        gitIcon,
+        htmlIcon,
+        javaScriptIcon,
+        nodeIcon,
+        reactIcon,
+        sassIcon,
         expressIcon
     ];
 
