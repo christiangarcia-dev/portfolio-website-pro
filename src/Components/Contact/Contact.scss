@@ -1,0 +1,327 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.contact > * {
+    background-color: $color-main;
+}
+
+.contact {
+    z-index: 100;
+    outline: 1px solid $color-border;
+    border-radius: 33px;
+    margin-bottom: 2rem;
+    background-color: $color-main;
+    position: relative;
+
+    @include tablet {
+        margin-inline: 3rem;
+        margin-bottom: 7rem;
+        border-radius: 49px;
+    }
+
+    @include desktop {
+        margin-bottom: 5rem;
+        margin-inline: 7rem;
+    }
+
+    &__moon {
+        position: absolute;
+        top: 1%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        width: 105%;
+        height: auto;
+        max-height: 644px;
+        max-width: 644px;
+        opacity: 50%;
+
+        @include tablet {
+            width: 65%;
+            max-height: 700px;
+            max-width: 700px;
+        }
+
+        @include desktop {
+            top: 2%;
+        }
+    }
+
+    &__top {
+        border-radius: 33px 33px 0 0;
+
+        @include tablet {
+            border-radius: 49px 49px 0 0;
+        }
+        
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+        }
+
+        &__header {
+            font-size: 1.7rem;
+            font-weight: 500;
+            width: 55%;
+            text-align: center;
+            padding-top: 1.5rem;
+            padding-bottom: 0.5rem;
+            margin-inline: auto;
+
+            @include tablet {
+                font-size: 3rem;
+                width: 45%;
+                padding-block: 2.5rem;
+            }
+
+            @include desktop {
+                text-align: left;
+                margin: 0;
+                font-size: 4rem;
+                font-weight: 400;
+                width: 43%;
+            }
+
+            @include desktop-cutoff {
+                font-size: 3.5rem;
+            }
+        }
+
+        &__socials {
+            display: none;
+
+            @include desktop {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                height: auto;
+                padding-top: 1.5rem;
+            }   
+
+            &--wrapper {
+                display: flex;
+                gap: 1rem;
+            }
+
+            &--box {
+                background: $education-card-gradient;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+            &--icon {
+                min-height: 4.3rem;
+                height: auto;
+                max-height: 88px;
+                padding: 1rem;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            border-radius: 0 0 49px 49px;
+        }
+
+        &__input-group {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop {
+                flex-direction: row;
+                width: 100%;
+                gap: 2rem;
+            }
+        }
+
+        &__input-subgroup {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop {
+                width: 100%;
+            }
+        }
+
+        &__label {
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+
+            @include desktop {
+                display: block;
+                padding-left: 2rem;
+            }
+        }
+
+        &__input {
+            margin-bottom: 1rem;
+            border: none;
+            border-bottom: 1px solid $color-input-border;
+            background-color: transparent;
+            padding-bottom: 1rem;
+            color: $color-gray-text-form;
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            @include desktop {
+                padding-left: 2rem;
+            }
+
+            &::placeholder {
+                font-size: 0.9rem;
+                color: $color-gray-text-form;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: $color-input-border; 
+            }
+
+            &:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 1000px transparent inset; 
+                -webkit-text-fill-color: $color-gray-text-form; 
+                transition: background-color 5000s ease-in-out 0s; 
+            }
+
+            &:-webkit-autofill:focus {
+                -webkit-box-shadow: 0 0 0 1000px transparent inset;
+                -webkit-text-fill-color: $color-gray-text-form;
+            }
+
+            &--textarea {
+                resize: none;
+                height: 10rem;
+
+                @include desktop {
+                    height: 7rem;
+                }
+            }
+        }
+
+        &__submit {
+            background-color: $color-purple;
+            border: 2px solid $color-purple;
+            border-radius: 5px;
+            margin-block: 1.2rem;
+            padding-block: 0.95rem;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: ease-in-out 0.2s;
+            cursor: pointer;
+
+            @include tablet {
+                margin-bottom: 3.3rem;
+            }
+
+            &:hover {
+                background-color: rgb(255, 255, 255);
+                color: $color-main;
+                border: 2px solid $color-purple;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+        padding-bottom: 3rem;
+        border-radius: 0 0 33px 33px;
+
+        @include tablet {
+            justify-content: center;
+            gap: 3rem;
+            border-radius: 0 0 49px 49px;
+        }
+
+        @include desktop {
+            display: none;
+        }
+
+        &__socials--box {
+            background: $education-card-gradient;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        &__socials--icon {
+            min-height: 4.3rem;
+            height: 15vw;
+            max-height: 4.7rem;
+            padding: 1rem;
+        }
+    }
+
+    &__circle-gradient {
+        position: absolute;
+        z-index: -3;
+        height: 100vw;
+        // width: 100vw;
+        left: 0;
+        bottom: -12rem;
+
+        @include tablet {
+            bottom: 0;
+            left: 0;
+            height: 60vw;
+        }
+
+        @include desktop-cutoff {
+            height: 45vw;
+            width: 45vw;
+        }
+    }
+
+    &__circle-gradient--wrapper {
+        width: 100vw;
+
+        @include tablet {
+            overflow: hidden;
+            position: absolute;
+            background-color: transparent;
+            height: 100%;
+            width: 60vw;
+            bottom: -18rem;
+            right: -3rem;
+            z-index: -2;
+        }
+
+        @include desktop {
+            right: -7rem;
+        }
+
+        @include desktop-cutoff {
+            right: -16.5rem;
+            bottom: -10rem;
+            height: 150%;
+            width: 22.5vw;
+        }
+    }
+
+    &__form,
+    &__top,
+    &__bottom {
+        z-index: 2;
+        padding-inline: 1.4rem;
+
+        @include tablet {
+            padding-inline: 3rem;
+        }
+    }
+}

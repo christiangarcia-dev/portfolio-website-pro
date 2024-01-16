@@ -1,0 +1,96 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &__circle-gradient {
+
+        &--2 {
+            display: none;
+
+            @include tablet {
+                display: flex;
+                position: absolute;
+                height: 105vw;
+                z-index: -1;
+                left: 0;
+                bottom: 0;
+                transform: translate(-50%, 50%);
+            }
+        }
+    }
+
+    &__circle-gradient--2-wrapper {
+
+        @include tablet {
+            overflow: hidden;
+            position: absolute;
+            left: 45%;
+            bottom: 0;
+            height: 52.5vw; 
+            transform: translateX(-50%);
+            width: 105vw; 
+        }
+    }
+
+    &__logo {
+        height: 4rem;
+        margin-top: 1.6rem;
+        margin-bottom: 3rem;
+        z-index: 2000;
+        cursor: pointer;
+
+        @include tablet {
+            height: 4.7rem;
+        }
+    }
+
+    &__closer {
+        font-size: 0.9rem;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.5rem;
+        color: $color-gray-text;
+        width: 77%;
+        margin-bottom: 3rem;
+        z-index: 100;
+
+        @include tablet {
+            width: 47%;
+        }
+
+        @include desktop {
+            width: 35%;
+        }
+    }
+
+    &__copyright {
+        font-size: 0.9rem;
+        font-weight: 300;
+        text-align: center;
+        color: $color-gray-text;
+        background-color: $color-main;
+        z-index: 1000;
+        border-top: 1px solid $color-border;
+        padding-block: 1.85rem;
+        width: 100%;
+        margin-top: 1rem;
+
+        @include tablet {
+            margin-bottom: 5rem;
+            border-bottom: 1px solid $color-border;
+            border-radius: 49px;
+            width: 57%;
+            padding-block: 1.35rem;
+        }
+
+        @include desktop {
+            width: 45%;
+        }
+    }
+}

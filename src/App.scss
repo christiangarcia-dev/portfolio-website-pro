@@ -1,0 +1,28 @@
+@use './styles/partials/variables' as *;
+@use './styles/partials/mixins' as *;
+
+.App {
+
+    @include desktop-cutoff {
+        margin-inline: 9.5rem;
+    }
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+
+    @include ultrawide {
+        width: 1600px;
+        margin-inline: auto;
+    }
+}
+
+.navbar__circle-gradient, .navbar__circle-gradient--wrapper, .contact__circle-gradient, .footer__circle-gradient--2, .footer__circle-gradient--2--wrapper {
+
+    @include ultrawide {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+}

@@ -1,0 +1,70 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+@keyframes slide {
+
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    padding: 3.7rem 0;
+    background: transparent;
+    white-space: nowrap;
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    margin-inline: auto;
+
+    @include tablet {
+        width: 62%;
+    }
+
+    @include large {
+        width: 70%;
+    }
+
+    @include desktop {
+        width: 60%;
+    }
+}
+
+.logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 15.625rem;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, $color-main);
+}
+
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, $color-main);
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 110s slide infinite linear;
+}
+
+.logos-slide img {
+    height: 3.1rem;
+    margin: 0 2.5rem;
+}

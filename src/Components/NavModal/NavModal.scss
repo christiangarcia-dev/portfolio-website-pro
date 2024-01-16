@@ -1,0 +1,58 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.nav-modal {
+    background-color: $color-main;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000; 
+
+    &.open {
+        display: block; 
+        position: relative;
+    }
+
+    &__close {
+        position: absolute;
+        right: 2.5rem;
+        top: 1.5rem;
+        cursor: pointer;
+    }
+
+    &__list {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-inline: auto;
+        width: 100%;
+        list-style-type: none;
+        gap: 2rem;
+
+        &__item {
+            font-size: 1.4rem;
+            font-weight: 500;
+            border-bottom: 1px solid $color-border;
+            padding: 0 0 1.2rem 1.2rem;
+            margin-inline: 3rem;
+            cursor: pointer;
+        }
+    }
+
+    &__contact {
+        margin-inline: 3rem;
+        align-self: center;
+        margin-top: auto;
+        padding: 0.8rem 4rem;
+        background-color: $color-gray-button;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: center;
+        cursor: pointer;
+    }
+}

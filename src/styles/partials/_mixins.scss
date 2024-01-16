@@ -1,0 +1,31 @@
+@use '../partials/variables' as *;
+
+@mixin large {
+    @media (min-width: $mobile-l-breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop-cutoff {
+    @media (min-width: $desktop-cutoff-breakpoint) {
+        @content;
+    }
+}
+
+@mixin ultrawide {
+    @media (min-width: $ultrawide-breakpoint) {
+        @content;
+    }
+}

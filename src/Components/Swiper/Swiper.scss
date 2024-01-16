@@ -1,0 +1,159 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.custom-swiper-container {
+    position: relative;
+    margin-inline: 2rem;
+
+    @include tablet {
+        margin-inline: 0;
+    }
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: linear-gradient(45deg, $color-purple, $color-orange) !important;
+}
+
+
+.swiper {
+    width: 100%;
+    border-radius: 10px;
+
+    @include tablet {
+        border-radius: 20px;
+    }
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: rgba($color: #000000, $alpha: 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+        width: min-content !important;
+    }
+}
+
+.swiper-slide img {
+    display: block;
+    // min-width: 19.5rem;
+    // min-height: 17.625rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+    @include tablet {
+        height: 23rem;
+        width: auto;
+    }
+
+    @include desktop {
+        height: 25rem;
+    }
+
+    @include desktop-cutoff {
+        height: 27rem;
+    }
+}
+
+.swiper-slide-active {
+    width: 100% !important;
+    height: 100% !important;
+
+    @include tablet {
+        width: min-content !important;
+        height: min-content !important;
+    }
+}
+
+.swiper-button-prev, .swiper-button-next,
+.swiper-button-prev:after, .swiper-button-next:after {
+    display: none;
+}
+
+.custom-swiper-button-prev, .custom-swiper-button-next {
+    background-color: transparent;
+    border: none;
+}
+
+.custom-swiper-icon-prev, .custom-swiper-icon-next {
+    
+} 
+
+.name {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+        position: absolute;
+        bottom: 0;
+        z-index: 1000;
+        background-color: $color-main;
+        border: 1px solid $color-main;
+        padding: 1.5rem 8rem 1.1rem 2rem;
+        margin-top: 0;
+        margin-left: -1rem;
+        color: $color-white;
+    }
+
+    &::after {
+        display: none;
+
+        @include tablet {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: -0.2rem;
+            z-index: -1; 
+            background-color: $color-main;
+            border: 1px solid $color-main;
+            transform: skewX(34deg);
+            transform-origin: top right;
+        }
+    }
+
+    .name h1 {
+        display: inline-block; 
+        transform: skewX(-34deg);
+        transform-origin: top right;
+    }
+}
+
+.swiper-slide {
+
+    @include tablet {
+        width: 60%;
+    }
+}
+
+.swiper-slide:nth-child(2n) {
+
+    @include tablet {
+        width: 60%;
+    }
+}
+
+.swiper-slide:nth-child(3n) {
+
+    @include tablet {
+        width: 40%;
+    }
+}
+
+.github, .external-link {
+    height: 1.3rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.external-link {
+    height: 1.2rem;
+}

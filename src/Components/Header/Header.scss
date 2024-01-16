@@ -1,0 +1,173 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.header {
+    
+    &__horizontal-line {
+        border-top: 1px solid $color-border;
+        position: relative;
+        height: 1px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__arrow-icon {
+        height: 6rem;
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+}
+
+.hero {
+    margin-inline: 2rem;
+
+    @include tablet {
+        margin-inline: 3rem;
+        background-image: url('../../assets/images/hero-illustration.svg');
+        background-position: center;
+        background-size: 30rem;
+        border: 1px solid $color-border;
+        border-radius: 49px;
+        margin-top: 3rem;
+        position: relative;
+    }
+
+    @include desktop {
+        margin-inline: 7rem;
+        padding-block: 1.5rem;
+    }
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 5.5rem;
+
+        &__hi {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            animation: fadeIn 1.5s ease-out;
+
+            @include tablet {
+                margin-inline: auto;
+                margin-bottom: 1.5rem;
+                font-size: 1.3rem;
+            }
+
+            @include desktop {
+                font-size: 1.4rem;
+                font-weight: 300;
+            }
+        }
+
+        &__position {
+            font-size: 3rem;
+            margin-bottom: 0rem;
+            animation: slideInFromLeft 1.5s ease-out;
+
+            @include tablet {
+                font-size: 4rem;
+                text-align: center;
+                width: 80%;
+                margin-inline: auto;
+            }
+
+            @include desktop {
+                font-size: 4.2rem;
+                width: 75%;
+            }
+        }
+
+        &__coding-icon {
+            height: 3rem;
+            margin-bottom: -0.3rem;
+
+            @include desktop {
+                height: 3.8rem;
+                margin-bottom: -0.4rem;
+            }
+        }
+
+        &__ux-design {
+            position: relative;
+            border: 0.6px solid $color-purple;
+            padding-inline: 0.3rem;
+            margin-left: -0.3rem;
+            white-space: nowrap;
+
+            &:before {
+                content: ''; 
+                position: absolute;
+                top: -8px;
+                left: -2px;
+                width: 14%;
+                height: 100%;
+                border-top: 8px solid $color-purple;
+                box-sizing: border-box; 
+
+                @include tablet {
+                    border-top: 12px solid $color-purple;
+                    top: -12px;
+                    left: -1px;
+                }
+            }
+        }
+
+        &__about {
+            width: 85%;
+            margin-inline: auto;
+            margin-bottom: 6.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: $color-gray-text-form;
+            line-height: 1.5rem;
+
+            @include tablet {
+                width: 40%;
+            }
+
+            @include desktop {
+                width: 32%; 
+            }
+        }
+
+        &__arrow-icon {
+            display: none;
+
+            @include tablet {
+                display: block;
+                height: 5.6rem; 
+                position: absolute;
+                z-index: 10;
+                bottom: -3rem;
+                left: 50%;
+                transform: translateX(-50%);
+                cursor: pointer;
+            }
+        }
+    }
+}
