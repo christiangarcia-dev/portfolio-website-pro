@@ -18,7 +18,7 @@
         font-size: 1.75rem;
         font-weight: 500;
         text-align: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
 
         @include tablet {
             font-size: 2.1rem;
@@ -56,10 +56,6 @@
         border-radius: 29px;
         margin-bottom: 1rem;
         padding: 2rem 1rem;
-
-        @include tablet {
-            // width: 41vw;
-        }
 
         &--frontend {
             background-image: linear-gradient(

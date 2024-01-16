@@ -31,7 +31,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: -1;
-        width: 105%;
+        width: 100%;
         height: auto;
         max-height: 644px;
         max-width: 644px;
@@ -70,6 +70,7 @@
             padding-top: 1.5rem;
             padding-bottom: 0.5rem;
             margin-inline: auto;
+            text-wrap: balance;
 
             @include tablet {
                 font-size: 3rem;
@@ -153,6 +154,7 @@
         }
 
         &__label {
+            font-size: 0.9rem;
             font-weight: 600;
             margin-top: 1rem;
             margin-bottom: 1rem;
@@ -164,6 +166,7 @@
         }
 
         &__input {
+            font-size: 0.9rem;
             margin-bottom: 1rem;
             border: none;
             border-bottom: 1px solid $color-input-border;
@@ -214,13 +217,14 @@
             border: 2px solid $color-purple;
             border-radius: 5px;
             margin-block: 1.2rem;
-            padding-block: 0.95rem;
+            padding-block: 0.75rem;
             font-size: 1rem;
             font-weight: 500;
             transition: ease-in-out 0.2s;
             cursor: pointer;
 
             @include tablet {
+                padding-block: 0.95rem;
                 margin-bottom: 3.3rem;
             }
 
@@ -272,7 +276,6 @@
         position: absolute;
         z-index: -3;
         height: 100vw;
-        // width: 100vw;
         left: 0;
         bottom: -12rem;
 

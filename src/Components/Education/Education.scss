@@ -5,11 +5,11 @@
     width: 100vw;
 
     &__overflow-container {
-        width: 100vw;
         overflow: hidden;
-        margin-inline: 2rem;
+        margin-left: 2rem;
 
         @include tablet {
+            width: 100vw;
             margin-inline: 3rem;
         }
     
