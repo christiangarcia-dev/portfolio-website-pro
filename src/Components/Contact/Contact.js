@@ -88,7 +88,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <form className='contact__form' onSubmit={handleSubmit}>
+            <form className='contact__form' name='contact' onSubmit={handleSubmit} netlify>
                 <div className='contact__form__input-group'>
                     <div className='contact__form__input-subgroup'>
                         <label className='contact__form__label'>First Name</label>
