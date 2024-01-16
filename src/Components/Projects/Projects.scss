@@ -76,7 +76,7 @@
             padding: 2rem;
             padding-bottom: 3.5rem;
             margin-left: 3rem;
-            margin-bottom: 3rem;
+            margin-bottom: 5rem;
         }
 
         @include desktop {
@@ -84,7 +84,6 @@
         }
 
         @include desktop-cutoff {
-            // width: 100vw;
             margin-right: -9.5rem;
         }
     }
