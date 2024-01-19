@@ -41,8 +41,8 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <form className='contact__form' name='contact' method='post' data-netlify='true' onSubmit='submit'>
-                <input type='hidden' name='form-name' value='contact' />
+            <form className='contact__form' name='contact v1' method='post' data-netlify='true' onSubmit='submit'>
+                <input type='hidden' name='form-name' value='contact v1' />
                 <div className='contact__form__input-group'>
                     <div className='contact__form__input-subgroup'>
                         <label className='contact__form__label' htmlFor='firstName'>First Name</label>
