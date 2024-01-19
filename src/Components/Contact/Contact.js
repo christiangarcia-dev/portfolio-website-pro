@@ -9,6 +9,23 @@ import circleGradient from '../../assets/images/gradient-circle.svg'
 
 function Contact() {
 
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+    
+        try {
+            await fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            });
+            alert("Form successfully submitted");
+            
+        } catch (error) {
+            alert("Submission failed");
+        }
+    };
+
     return (
         <section className='contact' id='contact'>
             <img className='contact__moon' src={moonImage}></img>
@@ -41,7 +58,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <form className='contact__form' name='contact v1' method='POST' netlify>
+            <form className='contact__form' name='contact v1' method='POST' onSubmit={handleSubmit} netlify>
                 <input type='hidden' name='form-name' value='contact v1' />
                 <div className='contact__form__input-group'>
                     <div className='contact__form__input-subgroup'>
