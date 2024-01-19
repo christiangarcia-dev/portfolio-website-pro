@@ -34,7 +34,7 @@ const projectNames = [
 
 const githubUrls = [
     'https://github.com/christiangarcia-dev/brainstation-capstone-client',
-    'https://www.google.com/', // MISSING -- data connect repo
+    'https://github.com/JorgeAPerezG/hackathon-client', 
     'https://github.com/christiangarcia-dev/instock-client',
     'https://github.com/christiangarcia-dev/christian-garcia-brainflix',
     'https://github.com/christiangarcia-dev/space-tourism-website-main',
