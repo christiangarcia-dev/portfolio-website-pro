@@ -9,52 +9,52 @@ import circleGradient from '../../assets/images/gradient-circle.svg'
 
 function Contact() {
 
-    const [form, setForm] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        message: ''
-    });
-    const [errors, setErrors] = useState({});
+    // const [form, setForm] = useState({
+    //     firstName: '',
+    //     lastName: '',
+    //     email: '',
+    //     phone: '',
+    //     message: ''
+    // });
+    // const [errors, setErrors] = useState({});
 
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-    };
+    // const handleChange = (e) => {
+    //     setForm({ ...form, [e.target.name]: e.target.value });
+    // };
 
-    const validateForm = () => {
-        let valid = true;
-        let errors = {};
+    // const validateForm = () => {
+    //     let valid = true;
+    //     let errors = {};
 
-        if (!form.firstName.trim()) {
-            errors.firstName = 'First name is required';
-            alert('First name is required');
-            valid = false;
-        }
+    //     if (!form.firstName.trim()) {
+    //         errors.firstName = 'First name is required';
+    //         alert('First name is required');
+    //         valid = false;
+    //     }
 
-        if (!form.lastName.trim()) {
-            errors.lastName = 'Last name is required';
-            alert('Last name is required');
-            valid = false;
-        }
+    //     if (!form.lastName.trim()) {
+    //         errors.lastName = 'Last name is required';
+    //         alert('Last name is required');
+    //         valid = false;
+    //     }
 
-        if (!form.message.trim()) {
-            errors.message = 'Message is required';
-            alert('Message field is required');
-            valid = false;
-        }
+    //     if (!form.message.trim()) {
+    //         errors.message = 'Message is required';
+    //         alert('Message field is required');
+    //         valid = false;
+    //     }
 
-        setErrors(errors);
-        return valid;
-    };
+    //     setErrors(errors);
+    //     return valid;
+    // };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (validateForm()) {
-            console.log('Form submitted:', form);
-            alert('Thank you for your message!');
-        }
-    };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     if (validateForm()) {
+    //         console.log('Form submitted:', form);
+    //         alert('Thank you for your message!');
+    //     }
+    // };
 
     return (
         <section className='contact' id='contact'>
@@ -88,30 +88,30 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <form className='contact__form' name='contact' onSubmit={handleSubmit} netlify>
+            <form className='contact__form' name='contact' action='/contact' method='post' netlify>
                 <div className='contact__form__input-group'>
                     <div className='contact__form__input-subgroup'>
                         <label className='contact__form__label'>First Name</label>
-                        <input className='contact__form__input' placeholder='John' name='firstName' onChange={handleChange} value={form.firstName}></input>
+                        <input className='contact__form__input' type='text' name='firstName' placeholder='John' required></input>
                     </div>
                     <div className='contact__form__input-subgroup'>
                         <label className='contact__form__label'>Last Name</label>
-                        <input className='contact__form__input' placeholder='Johnson'></input>
+                        <input className='contact__form__input' type='text' name='lastName' placeholder='Johnson' required></input>
                     </div>
                 </div>
                 <div className='contact__form__input-group'>
                     <div className='contact__form__input-subgroup'>
                         <label className='contact__form__label'>Email Address</label>
-                        <input className='contact__form__input' placeholder='johnjohnson@gmail.com'></input>
+                        <input className='contact__form__input' type='email' name='email' placeholder='johnjohnson@gmail.com'></input>
                     </div>
                     <div className='contact__form__input-subgroup'>
                         <label className='contact__form__label'>Phone Number</label>
-                        <input className='contact__form__input' placeholder='+1 457 584 4567'></input>
+                        <input className='contact__form__input' type='tel' name='tel' placeholder='+1 457 584 4567'></input>
                     </div>
                 </div>
 
                 <label className='contact__form__label'>Message</label>
-                <textarea className='contact__form__input contact__form__input--textarea' placeholder='Type here...'></textarea>
+                <textarea className='contact__form__input contact__form__input--textarea' type='text' name='message' placeholder='Type here...' required></textarea>
 
                 <button className='contact__form__submit' type='submit'>Contact Me</button>
             </form>
