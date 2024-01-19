@@ -9,53 +9,6 @@ import circleGradient from '../../assets/images/gradient-circle.svg'
 
 function Contact() {
 
-    // const [form, setForm] = useState({
-    //     firstName: '',
-    //     lastName: '',
-    //     email: '',
-    //     phone: '',
-    //     message: ''
-    // });
-    // const [errors, setErrors] = useState({});
-
-    // const handleChange = (e) => {
-    //     setForm({ ...form, [e.target.name]: e.target.value });
-    // };
-
-    // const validateForm = () => {
-    //     let valid = true;
-    //     let errors = {};
-
-    //     if (!form.firstName.trim()) {
-    //         errors.firstName = 'First name is required';
-    //         alert('First name is required');
-    //         valid = false;
-    //     }
-
-    //     if (!form.lastName.trim()) {
-    //         errors.lastName = 'Last name is required';
-    //         alert('Last name is required');
-    //         valid = false;
-    //     }
-
-    //     if (!form.message.trim()) {
-    //         errors.message = 'Message is required';
-    //         alert('Message field is required');
-    //         valid = false;
-    //     }
-
-    //     setErrors(errors);
-    //     return valid;
-    // };
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     if (validateForm()) {
-    //         console.log('Form submitted:', form);
-    //         alert('Thank you for your message!');
-    //     }
-    // };
-
     return (
         <section className='contact' id='contact'>
             <img className='contact__moon' src={moonImage}></img>
@@ -88,30 +41,31 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <form className='contact__form' name='contact' action='/contact' method='post' netlify>
+            <form className='contact__form' name='contact' method='post' data-netlify='true' onSubmit='submit'>
+                <input type='hidden' name='form-name' value='contact' />
                 <div className='contact__form__input-group'>
                     <div className='contact__form__input-subgroup'>
-                        <label className='contact__form__label'>First Name</label>
-                        <input className='contact__form__input' type='text' name='firstName' placeholder='John' required></input>
+                        <label className='contact__form__label' htmlFor='firstName'>First Name</label>
+                        <input className='contact__form__input' id='firstName' type='text' name='firstName' placeholder='John' required></input>
                     </div>
                     <div className='contact__form__input-subgroup'>
-                        <label className='contact__form__label'>Last Name</label>
-                        <input className='contact__form__input' type='text' name='lastName' placeholder='Johnson' required></input>
+                        <label className='contact__form__label' htmlFor='lastName'>Last Name</label>
+                        <input className='contact__form__input' id='lastName' type='text' name='lastName' placeholder='Johnson' required></input>
                     </div>
                 </div>
                 <div className='contact__form__input-group'>
                     <div className='contact__form__input-subgroup'>
-                        <label className='contact__form__label'>Email Address</label>
-                        <input className='contact__form__input' type='email' name='email' placeholder='johnjohnson@gmail.com'></input>
+                        <label className='contact__form__label' htmlFor='email'>Email Address</label>
+                        <input className='contact__form__input' id='email' type='email' name='email' placeholder='johnjohnson@gmail.com'></input>
                     </div>
                     <div className='contact__form__input-subgroup'>
-                        <label className='contact__form__label'>Phone Number</label>
-                        <input className='contact__form__input' type='tel' name='tel' placeholder='+1 457 584 4567'></input>
+                        <label className='contact__form__label' htmlFor='tel'>Phone Number</label>
+                        <input className='contact__form__input' id='tel' type='tel' name='tel' placeholder='+1 457 584 4567'></input>
                     </div>
                 </div>
 
-                <label className='contact__form__label'>Message</label>
-                <textarea className='contact__form__input contact__form__input--textarea' type='text' name='message' placeholder='Type here...' required></textarea>
+                <label className='contact__form__label' htmlFor='message'>Message</label>
+                <textarea className='contact__form__input contact__form__input--textarea' id='message' type='text' name='message' placeholder='Type here...' required></textarea>
 
                 <button className='contact__form__submit' type='submit'>Contact Me</button>
             </form>
